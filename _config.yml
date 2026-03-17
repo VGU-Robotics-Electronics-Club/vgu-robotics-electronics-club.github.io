@@ -1,0 +1,41 @@
+title: VGU Robotics & Electronics Club
+email: robot_club@vgu.edu.vn
+description: >- # this means to ignore newlines until "baseurl:"
+  VGU REC - The convergence of endless passion for robotics, microcircuits, and limitless creativity.
+baseurl: ""
+url: "https://vgu-robotics-electronics-club.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+collections:
+  activities:
+    output: true
+    permalink: /activities/:slug/
+  projects:
+    output: true
+    permalink: /projects/:slug/
+  materials:
+    output: true
+    permalink: /materials/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "activities"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "materials"
+    values:
+      layout: "post"

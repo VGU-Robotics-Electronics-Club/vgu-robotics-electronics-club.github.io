@@ -1,0 +1,20 @@
+# Jekyll build directory
+_site/
+
+# Jekyll caches
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby/Bundler dependencies (if installed locally)
+.bundle/
+vendor/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

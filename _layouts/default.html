@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <!-- Integrate Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Google Fonts: Rajdhani for headings (tech feel), Inter for content -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Integrate scripts and styles -->
+    <script src="{{ site.baseurl }}/assets/js/tailwind.config.js"></script>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/components.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/utilities.css">
+</head>
+<body class="antialiased selection:bg-recOrange selection:text-white flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-darker/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+                    <a href="{{ site.baseurl }}/">
+                        <img class="h-10 w-auto mix-blend-screen" src="{{ site.baseurl }}/assets/images/logo.png" alt="REC Logo" onerror="this.src='https://placehold.co/150x50/151520/F05A35?text=REC+LOGO&font=Rajdhani'">
+                    </a>
+                </div>
+                <!-- Nav Links -->
+                <div class="hidden md:flex space-x-8 font-tech text-lg tracking-wide">
+                    <a href="{{ site.baseurl }}/" class="text-{% if page.url == '/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">HOME</a>
+                    <a href="{{ site.baseurl }}/activities/" class="text-{% if page.url == '/activities/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">ACTIVITIES</a>
+                    <a href="{{ site.baseurl }}/projects/" class="text-{% if page.url == '/projects/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">PROJECTS</a>
+                    <a href="{{ site.baseurl }}/materials/" class="text-{% if page.url == '/materials/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">MATERIALS</a>
+                </div>
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="{{ site.baseurl }}/contact" class="bg-recOrange text-white font-tech text-lg px-6 py-2 rounded-sm clip-tech glow-orange transition-all duration-300 font-semibold tracking-wider hover:bg-orange-600">
+                        CONTACT US
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Setup -->
+    <main class="flex-grow pt-20">
+        {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-darker pt-16 pb-8 border-t border-gray-800 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap text-center lg:text-left">
+                <div class="w-full lg:w-6/12 px-4">
+                    <img class="h-12 w-auto mb-6 mx-auto lg:mx-0 mix-blend-screen" src="{{ site.baseurl }}/assets/images/logo.png" alt="REC Logo" onerror="this.src='https://placehold.co/150x50/151520/F05A35?text=REC+LOGO'">
+                    <p class="text-gray-400 font-sans text-sm mt-0 mb-2">
+                        VGU Robotics & Electronics Club<br>
+                        Vietnamese-German University
+                    </p>
+                    <div class="mt-6 flex gap-4 justify-center lg:justify-start">
+                        <!-- Social Icons Placeholders -->
+                    </div>
+                </div>
+                <div class="w-full lg:w-6/12 px-4 mt-8 lg:mt-0">
+                    <div class="flex flex-wrap items-top mb-6">
+                        <div class="w-full lg:w-6/12 px-4 ml-auto">
+                            <span class="block uppercase text-gray-300 text-sm font-tech font-bold mb-2">Quick Links</span>
+                            <ul class="list-unstyled font-sans text-gray-500">
+                                <li><a class="hover:text-recOrange font-semibold block pb-2 text-sm" href="{{ site.baseurl }}/activities/">Activities</a></li>
+                                <li><a class="hover:text-recOrange font-semibold block pb-2 text-sm" href="{{ site.baseurl }}/projects/">Projects</a></li>
+                                <li><a class="hover:text-recOrange font-semibold block pb-2 text-sm" href="{{ site.baseurl }}/materials/">Materials</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-800" />
+            <div class="flex flex-wrap items-center md:justify-between justify-center">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                    <div class="text-sm text-gray-500 font-sans font-semibold py-1">
+                        Copyright © 2026 VGU REC.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

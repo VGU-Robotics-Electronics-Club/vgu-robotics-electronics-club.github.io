@@ -1,0 +1,32 @@
+---
+layout: default
+title: Study Materials
+---
+<div class="container mx-auto px-4 py-24 mb-16">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold font-tech text-white uppercase tracking-wider">
+            Study <span class="text-green-500">Materials</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-recBlue to-green-500 mx-auto mt-4 mb-4"></div>
+        <p class="text-gray-400 font-sans max-w-2xl mx-auto">Repository of study materials, lecture slides, and practical guides for engineering programs at VGU.</p>
+    </div>
+
+    <div class="flex flex-wrap -mx-4">
+        {% for material in site.materials %}
+        <div class="w-full md:w-1/2 px-4 mb-8">
+            <a href="{{ site.baseurl }}{{ material.url }}" class="block h-full">
+                <div class="bg-surface border border-gray-800 p-6 rounded-md hover:border-green-500 group transition-colors duration-300">
+                    <h3 class="text-xl font-bold font-tech text-white mb-2 group-hover:text-green-400 transition-colors uppercase">{{ material.title }}</h3>
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2 py-1 bg-darker text-gray-400 text-xs rounded border border-gray-700">{{ material.course }}</span>
+                    </div>
+                    <p class="text-gray-400 font-sans text-sm mb-4">{{ material.description }}</p>
+                    <span class="text-green-500 font-tech tracking-wider text-sm font-semibold flex items-center gap-2">
+                        VIEW MATERIAL <span class="group-hover:translate-x-2 transition-transform">→</span>
+                    </span>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

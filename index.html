@@ -1,0 +1,145 @@
+---
+layout: default
+title: Home
+---
+
+<!-- Hero Section -->
+<div class="relative pb-32 flex content-center items-center justify-center min-h-[90vh]">
+    <!-- Background Image -->
+    <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image: url('{{ site.baseurl }}/assets/images/hero.jpg');">
+        <!-- Overlay for readable text -->
+        <span id="blackOverlay" class="w-full h-full absolute opacity-80 bg-gradient-to-b from-darker via-dark/90 to-dark"></span>
+    </div>
+    
+    <div class="container relative mx-auto px-4 mt-20">
+        <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-8/12 px-4 mx-auto text-center">
+                <div class="font-tech">
+                    <p class="text-recBlue font-semibold tracking-widest uppercase mb-2">VGU Robotics & Electronics Club</p>
+                    <h1 class="text-white font-bold text-5xl md:text-7xl mb-6 uppercase leading-tight drop-shadow-lg">
+                        Building the future <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-recOrange to-yellow-500">Mastering technology</span>
+                    </h1>
+                    <p class="mt-4 text-lg text-gray-300 font-sans max-w-2xl mx-auto mb-10">
+                        The convergence of endless passion for robotics, microcircuits, and limitless creativity. Join REC to master technology and forge your engineering spirit.
+                    </p>
+                    <div class="flex justify-center gap-4">
+                        <a href="{{ site.baseurl }}/activities/" class="bg-recOrange text-white font-tech text-xl px-8 py-3 rounded-sm clip-tech glow-orange transition-all hover:-translate-y-1 inline-block">
+                            EXPLORE ACTIVITIES
+                        </a>
+                        <a href="{{ site.baseurl }}/projects/" class="bg-transparent border border-recOrange text-recOrange font-tech text-xl px-8 py-3 rounded-sm hover:bg-recOrange hover:text-white transition-all hover:-translate-y-1 inline-block">
+                            VIEW PROJECTS
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Decorative bottom svg -->
+    <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-16" style="transform: translateZ(0);">
+        <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+            <polygon class="text-dark fill-current" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+    </div>
+</div>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-dark relative border-b border-gray-800">
+    <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#3DB8E8 1px, transparent 1px), linear-gradient(90deg, #3DB8E8 1px, transparent 1px); background-size: 50px 50px;"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="flex flex-wrap items-center">
+            <div class="w-full md:w-5/12 px-4 mr-auto ml-auto mb-10 md:mb-0">
+                <div class="relative flex flex-col min-w-0 break-words w-full shadow-2xl rounded-lg border-tech bg-surface clip-tech overflow-hidden group">
+                    <img alt="REC Space Logo" src="{{ site.baseurl }}/assets/images/logo.jpg" class="w-full align-middle img-hover-zoom" onerror="this.src='https://placehold.co/600x600/151520/F05A35?text=Space+Logo'">
+                </div>
+            </div>
+            <div class="w-full md:w-6/12 px-4 mr-auto ml-auto">
+                <h3 class="text-4xl mb-2 font-semibold leading-normal font-tech text-white uppercase">
+                    About <span class="text-recOrange">REC</span>
+                </h3>
+                <div class="w-16 h-1 bg-recOrange mb-6"></div>
+                <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-300 font-sans">
+Founded in 2011, the VGU Robotics and Electronics Club (REC) at the Vietnamese-German University is the leading and only student community in electronics, robotics, and engineering.
+                </p>
+                <p class="text-lg font-light leading-relaxed mt-0 mb-8 text-gray-300 font-sans">
+With a mission to inspire passion for science and technology, REC serves as a platform for innovation where students explore future technologies, sharpen practical skills, and transform creative ideas into reality.  
+                </p>
+                <ul class="list-none mt-6 font-tech text-xl text-gray-200">
+                    <li class="py-2 flex items-center gap-3">
+                        <span class="w-2 h-2 rounded-full bg-recOrange glow-orange"></span> Robot Creation & Design
+                    </li>
+                    <li class="py-2 flex items-center gap-3">
+                        <span class="w-2 h-2 rounded-full bg-recBlue shadow-[0_0_10px_#3DB8E8]"></span> Embedded Systems Programming
+                    </li>
+                    <li class="py-2 flex items-center gap-3">
+                        <span class="w-2 h-2 rounded-full bg-recOrange glow-orange"></span> Organizing Technical Esport Tournaments
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Events Section Preview -->
+<section id="events" class="py-24 bg-darker">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold font-tech text-white uppercase tracking-wider">
+                Technology <span class="text-recOrange">Arena</span>
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-recBlue to-recOrange mx-auto mt-4 mb-4"></div>
+            <p class="text-gray-400 font-sans max-w-2xl mx-auto">REC's outstanding tournaments and activities.</p>
+        </div>
+
+        <div class="flex flex-wrap -mx-4 justify-center">
+            {% for activity in site.activities limit:3 %}
+            <div class="w-full md:w-1/3 px-4 mb-8">
+                <a href="{{ site.baseurl }}{{ activity.url }}" class="block h-full">    
+                    <div class="bg-surface border-tech p-6 rounded-md group h-full cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                        {% if activity.image %}
+                        <div class="relative h-64 w-full mb-6 overflow-hidden rounded clip-tech bg-dark flex items-center justify-center p-2">
+                            <img src="{{ site.baseurl }}/assets/images/{{ activity.image }}" alt="{{ activity.title }}" class="max-h-full max-w-full object-contain img-hover-zoom drop-shadow-[0_0_15px_rgba(61,184,232,0.3)]" onerror="this.src='https://placehold.co/400x400/0D0D14/3DB8E8?text={{ activity.title | url_encode }}'">
+                        </div>
+                        {% endif %}
+                        <h3 class="text-2xl font-bold font-tech text-white mb-2 group-hover:text-recOrange transition-colors uppercase">{{ activity.title }}</h3>
+                        <p class="text-gray-400 font-sans text-sm mb-4">{{ activity.excerpt | strip_html | truncatewords: 20 }}</p>
+                        <span class="text-recBlue font-tech tracking-wider text-sm font-semibold flex items-center gap-2">
+                            LEARN MORE <span class="group-hover:translate-x-2 transition-transform">→</span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <div class="text-center mt-12">
+            <a href="{{ site.baseurl }}/activities/" class="inline-block border border-gray-600 text-gray-300 hover:text-white hover:border-recOrange font-tech text-lg px-8 py-3 rounded-sm transition-all hover:-translate-y-1">
+                VIEW ALL ACTIVITIES
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Mini CTA Section -->
+<section class="relative py-20 bg-darker overflow-hidden border-t border-b border-recOrange/30">
+    <div class="absolute inset-0 z-0 opacity-20 bg-cover bg-center" style="background-image: url('{{ site.baseurl }}/assets/images/STANDEE.png');"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-darker via-dark/90 to-transparent z-0"></div>
+    
+    <div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between">
+        <div class="mb-8 md:mb-0 max-w-2xl">
+            <h2 class="text-3xl md:text-5xl font-tech font-bold uppercase text-white mb-4">
+                Have a <span class="text-recOrange text-transparent bg-clip-text bg-gradient-to-r from-recOrange to-yellow-500">game-changing</span> idea?
+            </h2>
+            <p class="text-gray-300 text-lg font-sans">
+                Whether you're looking for tournament partnerships, workshop collaborations, or simply want to talk tech with us. Let's build the future together!
+            </p>
+        </div>
+        <div>
+            <a href="{{ site.baseurl }}/contact" class="inline-block bg-recOrange text-white font-tech text-2xl px-10 py-4 rounded-sm clip-tech glow-orange transition-all hover:scale-105 uppercase tracking-wider">
+                GET IN TOUCH
+            </a>
+        </div>
+    </div>
+</section>
