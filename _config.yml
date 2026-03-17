@@ -8,6 +8,7 @@ url: "https://vgu-robotics-electronics-club.github.io"
 # Build settings
 markdown: kramdown
 theme: minima
+future: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
