@@ -1,0 +1,165 @@
+---
+layout: default
+title: Publications & Research
+permalink: /publications/
+---
+
+<div class="container mx-auto px-4 py-24 mb-16">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold font-tech text-white uppercase tracking-wider">
+            Publications & <span class="text-recBlue">Research</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-recBlue to-recOrange mx-auto mt-4 mb-4"></div>
+        <p class="text-gray-400 font-sans max-w-2xl mx-auto">Academic publications, research papers, and technical documentation created by REC members.</p>
+    </div>
+
+    <!-- Publications Grid -->
+    <div class="grid gap-8">
+        {% for pub in site.data.publications.publications %}
+            <div class="publication-item">
+                <div class="bg-surface/60 border border-gray-800 rounded-lg p-8 hover:border-recOrange/50 transition-all duration-300 hover:shadow-[0_0_20px_rgba(240,90,53,0.1)]">
+                    <div class="flex items-start justify-between mb-4">
+                        <div class="flex-1">
+                            <h3 class="text-xl md:text-2xl font-bold font-tech text-white mb-2 group-hover:text-recOrange transition-colors">{{ pub.title }}</h3>
+                            
+                            <!-- Authors with expandable details -->
+                            {% assign club_count = 0 %}
+                            {% for author in pub.authors %}
+                                {% if author.club_member %}
+                                    {% assign club_count = club_count | plus: 1 %}
+                                {% endif %}
+                            {% endfor %}
+                            
+                            <div class="mb-3">
+                                <button class="author-toggle text-recOrange font-semibold hover:underline text-sm" onclick="toggleAuthors(this)">
+                                    <span class="author-count">{{ pub.authors | size }} authors</span>
+                                    {% if club_count > 0 %}<span class="text-gray-500">({{ club_count }} from REC)</span>{% endif %}
+                                    <span class="toggle-icon">▼</span>
+                                </button>
+                                
+                                <div class="author-details hidden mt-3 ml-2 border-l-2 border-recOrange/30 pl-3 space-y-2">
+                                    {% for author in pub.authors %}
+                                    <div class="py-1">
+                                        {% if author.club_member %}
+                                            <div class="text-white font-semibold text-sm">{{ author.name }}</div>
+                                        {% else %}
+                                            <div class="text-gray-300 text-sm">{{ author.name }}</div>
+                                        {% endif %}
+                                        
+                                        {% if author.roles %}
+                                        <div class="text-gray-500 text-xs mt-0.5">
+                                            {% for role in author.roles %}
+                                                <div>• {{ role }}</div>
+                                            {% endfor %}
+                                        </div>
+                                        {% endif %}
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <!-- Venue badge -->
+                            {% if pub.venue %}
+                            <div class="inline-block mb-3">
+                                <span class="inline-block px-3 py-1 bg-darker border border-recOrange/30 text-recOrange text-xs font-tech rounded">{{ pub.venue }}</span>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% if pub.year %}
+                        <span class="text-recOrange font-tech text-sm font-bold ml-4 whitespace-nowrap">{{ pub.year }}</span>
+                        {% endif %}
+                    </div>
+
+                    <!-- Abstract with Show More -->
+                    {% if pub.abstract %}
+                    <div class="publication-abstract mb-4">
+                        <p class="text-gray-300 font-sans text-sm leading-relaxed abstract-text">
+                            <span class="abstract-preview">{{ pub.abstract | truncatewords: 40 }}</span>
+                            <span class="abstract-full hidden">{{ pub.abstract }}</span>
+                        </p>
+                        {% if pub.abstract | size > 200 %}
+                        <button class="text-recOrange font-tech tracking-wider text-xs font-semibold mt-2 hover:text-orange-400 transition-colors show-more-btn">
+                            SHOW MORE
+                        </button>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+
+                    <!-- Tags -->
+                    <div class="flex flex-wrap gap-3 mb-4">
+                        {% if pub.tags %}
+                            {% for tag in pub.tags %}
+                            <span class="inline-block px-3 py-1 bg-darker border border-gray-700 text-gray-300 text-xs font-tech rounded">{{ tag }}</span>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+
+                    <!-- View Link -->
+                    {% if pub.link %}
+                    <a href="{{ pub.link }}" target="_blank" class="inline-block text-recOrange font-tech tracking-wider text-sm font-semibold flex items-center gap-2 hover:gap-3 transition-all">
+                        VIEW PUBLICATION <span>→</span>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    .abstract-preview {
+        display: inline;
+    }
+    
+    .abstract-full {
+        display: none;
+    }
+    
+    .abstract-full.active {
+        display: inline;
+    }
+    
+    .abstract-preview.hidden {
+        display: none;
+    }
+
+    .show-more-btn {
+        cursor: pointer;
+    }
+</style>
+
+<script>
+function toggleAuthors(btn) {
+    const details = btn.closest('div').querySelector('.author-details');
+    const icon = btn.querySelector('.toggle-icon');
+    
+    details.classList.toggle('hidden');
+    
+    if (details.classList.contains('hidden')) {
+        icon.textContent = '▼';
+    } else {
+        icon.textContent = '▲';
+    }
+}
+
+document.querySelectorAll('.show-more-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const abstractText = this.parentElement.querySelector('.abstract-text');
+        const preview = abstractText.querySelector('.abstract-preview');
+        const full = abstractText.querySelector('.abstract-full');
+        
+        if (full.classList.contains('active')) {
+            // Show less
+            preview.classList.remove('hidden');
+            full.classList.remove('active');
+            this.textContent = 'SHOW MORE';
+        } else {
+            // Show more
+            preview.classList.add('hidden');
+            full.classList.add('active');
+            this.textContent = 'SHOW LESS';
+        }
+    });
+});
+</script>

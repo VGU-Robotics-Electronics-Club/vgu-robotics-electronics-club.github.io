@@ -1,0 +1,19 @@
+publications:
+  - title: "A Real-time Vehicle Detection Pipeline with Data-centric Enhancements and Multi-stage DETR Distillation"
+    authors:
+      - name: "Huy Minh Nhat Nguyen"
+        club_member: true
+        roles: ["Vice Head of Tech. Dept. 2024", "Member of Tech. Dept. 2025"]
+      - name: "Hieu Dinh Trung Pham"
+        club_member: true
+        roles: ["Member of Tech. Dept. 2024", "Vice Head of Tech. Dept. 2024"]
+      - name: "Khang Minh Le"
+        club_member: true
+        roles: ["Member of Tech. Dept. 2024 & 2025"]
+      - name: "Cuong Tuan Nguyen"
+        club_member: false
+    year: 2025
+    venue: "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops, 2025, pp. 5441-5448"
+    link: "https://doi.org/10.1109/ICCVW69036.2025.00569"
+    abstract: "Real-time vehicle detection often requires trading off accuracy for speed. To validate a solution that excels on both fronts, we adopt fisheye imagery, a domain where extreme radial distortion and scale variation defeat standard detectors, as a rigorous testbed. Our pipeline comprises three key stages: (1) Multi-stage DETR Distillation, a four-phase knowledge transfer leveraging KD-DETR's fixed distillation queries with separate head- and feature-level stages to avoid gradient conflicts and ensure progressive learning; (2) Data-centric Enhancements, creating a diverse training pool via Co-DETR pseudo-labeling, CycleGAN-Turbo day-to-night style transfer, and object-level flash/blur augmentations; and (3) Adaptive Sample Mining, which dynamically upsamples complex examples to sharpen the model's focus. When paired with D-FINE-M, our method achieves an F1 score of 0.6318 at 145 FPS on the AI City Challenge 2024 Track 4 test set, and with D-FINE-N, it reaches 781 FPS with an F1-score of 0.5597, all measured on an RTX 4090. Evaluated on the challenging FishEye8K benchmark of the 9th AI City Challenge, our approach delivers strong accuracy while maintaining real-time FPS. By ignoring fisheye distortions and treating them as a domain-agnostic stress test, we demonstrate that this data-centric, multi-stage distillation framework generalizes seamlessly to standard vehicle and broader object detection tasks, offering a unified solution for high-precision, real-time vision. Our implemented code: https://github.com/NhatHuy1812/VGU_VLinsight_AICITY2025_Track4"
+    tags: ["AI", "Real-time Object Detection", "Distillation", "Research"]
