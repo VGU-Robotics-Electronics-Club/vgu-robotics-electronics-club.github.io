@@ -1,0 +1,387 @@
+/* Dark Theme (Default) */
+:root,
+[data-theme="dark"] {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #151520;
+    --bg-surface: #1e1e2d;
+    --bg-darker: #0d0d12;
+    
+    --text-primary: #ffffff;
+    --text-secondary: #d1d5db;
+    --text-tertiary: #9ca3af;
+    --text-muted: #6b7280;
+    
+    --border-primary: #374151;
+    --border-secondary: #1f2937;
+    
+    --accent-orange: #f05a35;
+    --accent-blue: #3db8e8;
+    --accent-green: #22c55e;
+    --accent-purple: #a855f7;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
+    --bg-surface: #f3f4f6;
+    --bg-darker: #e5e7eb;
+    
+    --text-primary: #1f2937;
+    --text-secondary: #374151;
+    --text-tertiary: #6b7280;
+    --text-muted: #9ca3af;
+    
+    --border-primary: #d1d5db;
+    --border-secondary: #e5e7eb;
+    
+    --accent-orange: #f05a35;
+    --accent-blue: #3db8e8;
+    --accent-green: #22c55e;
+    --accent-purple: #a855f7;
+}
+
+/* Apply theme variables */
+[data-theme="dark"] body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="light"] body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Navbar theme */
+[data-theme="dark"] nav {
+    background-color: rgba(13, 13, 18, 0.9) !important;
+    border-color: #374151;
+}
+
+[data-theme="light"] nav {
+    background-color: rgba(243, 244, 246, 0.9) !important;
+    border-color: #d1d5db;
+}
+
+/* Text colors in light theme */
+[data-theme="light"] a {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] a:hover {
+    color: var(--accent-orange);
+}
+
+/* Gray text overrides - make gray text darker in light mode for better contrast */
+[data-theme="light"] .text-gray-100 {
+    color: #e5e7eb;
+}
+
+[data-theme="light"] .text-gray-200 {
+    color: #6b7280;
+}
+
+[data-theme="light"] .text-gray-300 {
+    color: #4b5563;
+}
+
+[data-theme="light"] .text-gray-400 {
+    color: #4b5563;
+}
+
+[data-theme="light"] .text-gray-500 {
+    color: var(--text-tertiary);
+}
+
+[data-theme="light"] .text-white {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .text-recOrange {
+    color: #d84315;
+}
+
+/* Background overrides */
+[data-theme="light"] .bg-surface {
+    background-color: var(--bg-surface);
+}
+
+[data-theme="light"] .bg-darker {
+    background-color: var(--bg-darker);
+}
+
+[data-theme="light"] .bg-dark {
+    background-color: var(--bg-surface);
+}
+
+[data-theme="light"] .border-gray-700,
+[data-theme="light"] .border-gray-800 {
+    border-color: var(--border-primary);
+}
+
+/* Improve hero & text contrast in light mode */
+[data-theme="light"] #blackOverlay {
+    /* Slightly stronger translucent dark gradient for better hero text contrast */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.35)) !important;
+    opacity: 1 !important;
+}
+
+/* Strong text shadow for hero headings in light mode */
+[data-theme="light"] h1 {
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.4) !important;
+}
+
+[data-theme="light"] .drop-shadow-lg {
+    text-shadow: 0 8px 24px rgba(0,0,0,0.5) !important;
+}
+
+/* Darker gradient for bg-clip-text (hero gradient) in light mode */
+[data-theme="light"] .bg-clip-text {
+    background-image: linear-gradient(90deg, #c5280a 0%, #9c2104 100%) !important;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Strong shadow for hero section descriptive text */
+[data-theme="light"] .font-tech h1,
+[data-theme="light"] .font-tech > p {
+    text-shadow: 0 3px 10px rgba(0,0,0,0.5) !important;
+}
+
+/* Ensure hero headings remain white for readability over hero images in light mode */
+[data-theme="light"] .bg-hero ~ .container .font-tech h1,
+[data-theme="light"] .bg-hero ~ .container .font-tech h2,
+[data-theme="light"] .bg-hero ~ .container .font-tech h3 {
+    color: #ffffff !important;
+}
+
+/* Ensure entire hero text block appears above the overlay and is highly readable */
+[data-theme="light"] .bg-hero ~ .container .font-tech {
+    position: relative;
+    z-index: 30;
+}
+
+[data-theme="light"] .bg-hero ~ .container .font-tech p,
+[data-theme="light"] .bg-hero ~ .container .font-tech .text-recBlue {
+    color: #eaeaea !important;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.55) !important;
+}
+
+[data-theme="light"] .bg-hero ~ .container .font-tech .bg-clip-text {
+    /* Brighter gradient and subtle stroke/shadow for contrast */
+    background-image: linear-gradient(90deg, #ffb407 0%, #ffb407 100%) !important;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 0.4px rgba(0,0,0,0.35);
+    text-shadow: 0 6px 18px rgba(0,0,0,0.55) !important;
+}
+
+/* Ensure recOrange variants are sufficiently dark on light backgrounds */
+[data-theme="light"] .text-recOrange {
+    color: #b45309;
+}
+
+[data-theme="light"] .border-recOrange {
+    border-color: #b45309;
+}
+
+
+/* Button styling in light mode */
+[data-theme="light"] .border-recOrange {
+    border-color: #d84315;
+}
+
+[data-theme="light"] .hover\:border-recOrange:hover {
+    border-color: #d84315;
+}
+
+[data-theme="light"] .group:hover .hover\:border-recOrange {
+    border-color: #d84315;
+}
+
+/* Make outlined orange CTAs solid in light mode for better contrast */
+[data-theme="light"] a.bg-transparent.border.border-recOrange.text-recOrange,
+[data-theme="light"] .bg-transparent.border-recOrange.text-recOrange {
+    background-color: var(--accent-orange) !important;
+    color: #ffffff !important;
+    border-color: var(--accent-orange) !important;
+}
+
+[data-theme="light"] a.bg-transparent.border.border-recOrange.text-recOrange:hover,
+[data-theme="light"] .bg-transparent.border-recOrange.text-recOrange:hover {
+    background-color: #e65428 !important;
+    border-color: #e65428 !important;
+}
+
+/* Light theme specific adjustments */
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+    color: var(--text-primary);
+}
+
+[data-theme="light"] .bg-deeper {
+    background-color: var(--bg-darker);
+}
+
+[data-theme="light"] p {
+    color: var(--text-secondary);
+}
+
+/* Publication card adjustments for light theme */
+[data-theme="light"] .publication-item > div {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    border-color: rgba(15,23,42,0.06) !important;
+    box-shadow: 0 6px 18px rgba(15,23,42,0.03) !important;
+    color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .publication-item h3 {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .publication-item .text-gray-300,
+[data-theme="light"] .publication-item .text-gray-400,
+[data-theme="light"] .publication-item .text-gray-500 {
+    color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .publication-item .inline-block.px-3.py-1.bg-darker,
+[data-theme="light"] .publication-item .inline-block.px-3.py-1.bg-darker.border {
+    background-color: #f3f4f6 !important;
+    border-color: rgba(15,23,42,0.06) !important;
+    color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .publication-item a.inline-block.text-recOrange {
+    color: var(--accent-orange) !important;
+}
+
+[data-theme="light"] .publication-item .author-details {
+    background-color: transparent !important;
+}
+
+/* Org chart / member card styles for light theme */
+[data-theme="light"] .leadership-card {
+    background-color: #ffffff !important;
+    border-color: rgba(15,23,42,0.06) !important;
+    box-shadow: 0 8px 24px rgba(15,23,42,0.04) !important;
+    color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .leadership-card .p-4,
+[data-theme="light"] .leadership-card .p-2,
+[data-theme="light"] .leadership-card .p-6 {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .leadership-card h4,
+[data-theme="light"] .leadership-card .text-white {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .leadership-card p,
+[data-theme="light"] .leadership-card .text-gray-500,
+[data-theme="light"] .leadership-card .text-gray-700 {
+    color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .leadership-card .aspect-[3/4] {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%) !important;
+}
+
+[data-theme="light"] .leadership-card img {
+    filter: saturate(0.98) contrast(0.98);
+}
+
+[data-theme="light"] .leadership-card .text-5xl,
+[data-theme="light"] .leadership-card .text-3xl {
+    color: #6b7280 !important;
+}
+
+[data-theme="light"] .leadership-card:hover {
+    border-color: rgba(240,90,53,0.14) !important;
+    box-shadow: 0 12px 30px rgba(240,90,53,0.06) !important;
+}
+
+/* Org detail panel (right-side) adjustments for light theme */
+[data-theme="light"] div[id^="org-detail-panel-"] {
+    background-color: #ffffff !important;
+    border-left-color: var(--accent-orange) !important;
+    color: var(--text-primary) !important;
+    box-shadow: 0 12px 30px rgba(15,23,42,0.05) !important;
+}
+
+[data-theme="light"] div[id^="org-detail-panel-"] .p-6,
+[data-theme="light"] div[id^="org-detail-panel-"] .p-8 {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="light"] div[id^="org-detail-panel-"] .aspect-[3/4] {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%) !important;
+    border-color: rgba(15,23,42,0.06) !important;
+}
+
+[data-theme="light"] div[id^="org-detail-panel-"] .text-gray-400,
+[data-theme="light"] div[id^="org-detail-panel-"] .text-gray-300,
+[data-theme="light"] div[id^="org-detail-panel-"] .text-gray-500 {
+    color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] div[id^="org-detail-panel-"] button[onclick^="closeOrgDetails"] {
+    background-color: #f3f4f6 !important;
+    color: var(--text-secondary) !important;
+    border-color: rgba(15,23,42,0.06) !important;
+}
+
+[data-theme="light"] div[id^="org-detail-panel-"] img {
+    filter: none !important;
+}
+
+[data-theme="light"] div[id^="org-detail-panel-"] .border-b {
+    border-color: rgba(15,23,42,0.06) !important;
+}
+
+
+
+
+/* Mini CTA adjustments for light theme: make background slightly darker than page, and text dark for readability */
+[data-theme="light"] .py-20.bg-darker {
+    background-color: #eef2f6 !important;
+    color: var(--text-primary) !important;
+    border-top-color: rgba(0,0,0,0.06) !important;
+    border-bottom-color: rgba(0,0,0,0.06) !important;
+}
+
+[data-theme="light"] .py-20.bg-darker h2,
+[data-theme="light"] .py-20.bg-darker p,
+[data-theme="light"] .py-20.bg-darker a {
+    color: var(--text-primary) !important;
+}
+
+/* Soften standee background image and gradient overlay in light mode */
+[data-theme="light"] .bg-standee {
+    opacity: 0.06 !important;
+    filter: grayscale(10%) contrast(0.95) brightness(1.02) !important;
+}
+
+[data-theme="light"] .py-20.bg-darker > .bg-gradient-to-r.from-darker,
+[data-theme="light"] .py-20.bg-darker .bg-gradient-to-r.from-darker {
+    background: linear-gradient(to right, rgba(245,246,248,0.9), rgba(238,242,246,0.6) 60%, transparent) !important;
+}
+
+[data-theme="light"] .py-20.bg-darker .text-recOrange.text-transparent.bg-clip-text {
+    /* make the highlighted word more visible on light background */
+    background-image: linear-gradient(90deg, #f97316 0%, #facc15 100%) !important;
+}
+
+/* Smooth transition when toggling */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

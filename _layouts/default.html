@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <!-- Set theme early to avoid flash of opposite theme -->
+    <script>/* inline: set data-theme before CSS loads to prevent FOUC */(function(){try{var t=localStorage.getItem('theme');if(!t){var p=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches;t=p?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){} })();</script>
     <!-- Integrate Tailwind CSS for rapid styling -->
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <!-- Import Google Fonts: Rajdhani for headings (tech feel), Inter for content -->
@@ -14,6 +16,7 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/components.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/utilities.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css">
 </head>
 <body class="antialiased selection:bg-recOrange selection:text-white flex flex-col min-h-screen">
     <!-- Navbar -->
@@ -42,6 +45,14 @@
                         CONTACT US
                     </a>
                 </div>
+                <!-- Theme Toggle -->
+                <div class="ml-4 flex items-center">
+                    <button id="theme-toggle" aria-label="Toggle theme" class="p-2 rounded-md hover:bg-gray-700/40 transition-colors">
+                        <svg id="theme-toggle-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-11.34l-.7.7M4.04 19.96l-.7-.7M21 12h-1M4 12H3m15.66 5.66l-.7-.7M6.34 4.34l-.7.7M12 5a7 7 0 100 14 7 7 0 000-14z" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -56,7 +67,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-wrap text-center lg:text-left">
                 <div class="w-full lg:w-6/12 px-4">
-                    <img class="h-12 w-auto mb-6 mx-auto lg:mx-0 mix-blend-screen" src="{{ site.baseurl }}/assets/images/logo.png" alt="REC Logo" onerror="this.src='https://placehold.co/150x50/151520/F05A35?text=REC+LOGO'">
+                    <img class="h-12 w-auto mb-6 mx-auto lg:mx-0" src="{{ site.baseurl }}/assets/images/logo.png" alt="REC Logo" onerror="this.src='https://placehold.co/150x50/151520/F05A35?text=REC+LOGO'">
                     <p class="text-gray-400 font-sans text-sm mt-0 mb-2">
                         VGU Robotics & Electronics Club<br>
                         Vietnamese-German University
@@ -90,5 +101,6 @@
             </div>
         </div>
     </footer>
+    <script src="{{ site.baseurl }}/assets/js/theme-toggle.js"></script>
 </body>
 </html>
