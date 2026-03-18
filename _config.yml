@@ -8,7 +8,6 @@ url: "https://vgu-robotics-electronics-club.github.io"
 # Build settings
 markdown: kramdown
 theme: minima
-future: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -17,6 +16,9 @@ collections:
   activities:
     output: true
     permalink: /activities/:slug/
+  workshops:
+    output: true
+    permalink: /workshops/:slug/
   projects:
     output: true
     permalink: /projects/:slug/
@@ -28,6 +30,11 @@ defaults:
   - scope:
       path: ""
       type: "activities"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "workshops"
     values:
       layout: "post"
   - scope:

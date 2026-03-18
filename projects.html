@@ -13,7 +13,8 @@ permalink: /projects/
     </div>
 
     <div class="flex flex-wrap -mx-4">
-        {% for project in site.projects %}
+        {% assign sorted_projects = site.projects | sort: 'date' | reverse %}
+        {% for project in sorted_projects %}
         <div class="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
             <a href="{{ site.baseurl }}{{ project.url }}" class="block h-full">
                 <div class="bg-surface border-tech p-6 rounded-md group h-full cursor-pointer hover:-translate-y-2 transition-transform duration-300">

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <!-- Integrate Tailwind CSS for rapid styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <!-- Import Google Fonts: Rajdhani for headings (tech feel), Inter for content -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     
@@ -30,6 +30,7 @@
                 <div class="hidden md:flex space-x-8 font-tech text-lg tracking-wide">
                     <a href="{{ site.baseurl }}/" class="text-{% if page.url == '/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">HOME</a>
                     <a href="{{ site.baseurl }}/activities/" class="text-{% if page.url == '/activities/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">ACTIVITIES</a>
+                    <a href="{{ site.baseurl }}/workshops/" class="text-{% if page.url == '/workshops/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">WORKSHOPS</a>
                     <a href="{{ site.baseurl }}/projects/" class="text-{% if page.url == '/projects/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">PROJECTS</a>
                     <a href="{{ site.baseurl }}/materials/" class="text-{% if page.url == '/materials/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">MATERIALS</a>
                 </div>

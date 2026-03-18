@@ -94,7 +94,8 @@ With a mission to inspire passion for science and technology, REC serves as a pl
         </div>
 
         <div class="flex flex-wrap -mx-4 justify-center">
-            {% for activity in site.activities limit:3 %}
+            {% assign recent_activities = site.activities | sort: 'date' | reverse %}
+            {% for activity in recent_activities limit:3 %}
             <div class="w-full md:w-1/3 px-4 mb-8">
                 <a href="{{ site.baseurl }}{{ activity.url }}" class="block h-full">    
                     <div class="bg-surface border-tech p-6 rounded-md group h-full cursor-pointer hover:-translate-y-2 transition-transform duration-300">

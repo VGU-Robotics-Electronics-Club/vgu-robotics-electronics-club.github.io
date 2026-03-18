@@ -9,11 +9,12 @@ permalink: /activities/
             Activities <span class="text-recOrange">& Events</span>
         </h2>
         <div class="w-24 h-1 bg-gradient-to-r from-recBlue to-recOrange mx-auto mt-4 mb-4"></div>
-        <p class="text-gray-400 font-sans max-w-2xl mx-auto">REC's iconic annual tournaments, workshops, and networking activities.</p>
+        <p class="text-gray-400 font-sans max-w-2xl mx-auto">REC's iconic annual tournaments, and networking activities.</p>
     </div>
 
     <div class="flex flex-wrap -mx-4">
-        {% for activity in site.activities %}
+        {% assign sorted_activities = site.activities | sort: 'date' | reverse %}
+        {% for activity in sorted_activities %}
         <div class="w-full md:w-1/3 px-4 mb-8">
             <a href="{{ site.baseurl }}{{ activity.url }}" class="block h-full block">
                 <div class="bg-surface border-tech p-6 rounded-md group h-full cursor-pointer hover:-translate-y-2 transition-transform duration-300">
