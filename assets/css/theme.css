@@ -348,6 +348,80 @@
     border-color: rgba(15,23,42,0.06) !important;
 }
 
+/* Mobile menu adjustments for light theme */
+[data-theme="light"] #mobile-menu {
+    /* ensure backdrop and panel are appropriate for light mode */
+}
+
+[data-theme="light"] #mobile-menu-backdrop {
+    background-color: rgba(0,0,0,0.12) !important;
+    backdrop-filter: blur(4px) !important;
+}
+
+[data-theme="light"] #mobile-menu > .absolute.top-0.right-0 {
+    background-color: #ffffff !important;
+    border-left-color: rgba(15,23,42,0.06) !important;
+    color: var(--text-primary) !important;
+}
+
+[data-theme="light"] #mobile-menu a {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="light"] #mobile-menu a:hover {
+    color: var(--accent-orange) !important;
+}
+
+[data-theme="light"] #mobile-menu img {
+    filter: none !important;
+}
+
+[data-theme="light"] #mobile-menu button {
+    color: var(--text-secondary) !important;
+    background-color: transparent !important;
+}
+
+[data-theme="light"] #mobile-menu .bg-recOrange {
+    background-color: var(--accent-orange) !important;
+    color: #ffffff !important;
+}
+
+/* Contact page icon wrappers in light theme */
+[data-theme="light"] #contact-page a > .w-16.h-16.rounded-full {
+    background-color: #ffffff !important;
+    border-color: rgba(15,23,42,0.06) !important;
+    color: var(--accent-orange) !important;
+    background-image: none !important;
+}
+
+/* More specific rule for the facebook card (uses blue border) */
+[data-theme="light"] #contact-page a[href*="facebook"] > .w-16.h-16.rounded-full,
+[data-theme="light"] #contact-page a[target="_blank"] > .w-16.h-16.rounded-full {
+    color: #0ea5e9 !important;
+    border-color: rgba(14,165,233,0.12) !important;
+}
+
+/* Ensure hover still changes to accent colors */
+[data-theme="light"] #contact-page a.group:hover > .w-16.h-16.rounded-full {
+    background-color: var(--accent-orange) !important;
+    color: #ffffff !important;
+}
+
+/* Icon elements should use current color and no extra background */
+[data-theme="light"] #contact-page .icon-email,
+[data-theme="light"] #contact-page .icon-facebook {
+    background-color: currentColor !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    display: inline-block !important;
+}
+
+/* If there are SVGs inside, make sure they inherit color */
+[data-theme="light"] #contact-page .w-16.h-16.rounded-full svg {
+    color: inherit !important;
+    fill: currentColor !important;
+}
+
 
 
 

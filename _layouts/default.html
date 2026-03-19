@@ -45,6 +45,14 @@
                         CONTACT US
                     </a>
                 </div>
+                <!-- Mobile hamburger -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" aria-label="Open menu" class="p-2 rounded-md hover:bg-gray-700/40">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
                 <!-- Theme Toggle -->
                 <div class="ml-4 flex items-center">
                     <button id="theme-toggle" aria-label="Toggle theme" class="p-2 rounded-md hover:bg-gray-700/40 transition-colors">
@@ -56,6 +64,32 @@
             </div>
         </div>
     </nav>
+    <!-- Mobile menu (hidden on desktop) -->
+    <div id="mobile-menu" class="fixed inset-0 z-40 md:hidden hidden">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" id="mobile-menu-backdrop"></div>
+        <div class="absolute top-0 right-0 w-3/4 max-w-xs h-full bg-darker/95 border-l border-gray-800 p-6 overflow-auto">
+            <div class="flex items-center justify-between mb-6">
+                <a href="{{ site.baseurl }}/">
+                    <img class="h-10 w-auto mix-blend-screen" src="{{ site.baseurl }}/assets/images/logo.png" alt="REC Logo" onerror="this.src='https://placehold.co/150x50/151520/F05A35?text=REC+LOGO'">
+                </a>
+                <button id="mobile-menu-close" aria-label="Close menu" class="p-2 rounded-md hover:bg-gray-700/40">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col space-y-4 font-tech text-lg">
+                <a href="{{ site.baseurl }}/" class="text-gray-300 hover:text-white">HOME</a>
+                <a href="{{ site.baseurl }}/activities/" class="text-gray-300 hover:text-white">ACTIVITIES</a>
+                <a href="{{ site.baseurl }}/workshops/" class="text-gray-300 hover:text-white">WORKSHOPS</a>
+                <a href="{{ site.baseurl }}/publications/" class="text-gray-300 hover:text-white">PUBLICATIONS</a>
+                <a href="{{ site.baseurl }}/projects/" class="text-gray-300 hover:text-white">PROJECTS</a>
+                <a href="{{ site.baseurl }}/materials/" class="text-gray-300 hover:text-white">MATERIALS</a>
+                <a href="{{ site.baseurl }}/about/" class="text-gray-300 hover:text-white">ABOUT</a>
+                <a href="{{ site.baseurl }}/contact/" class="mt-4 inline-block bg-recOrange text-white font-tech text-lg px-6 py-2 rounded-sm">CONTACT US</a>
+            </nav>
+        </div>
+    </div>
 
     <!-- Main Content Setup -->
     <main class="flex-grow pt-20">
@@ -102,5 +136,6 @@
         </div>
     </footer>
     <script src="{{ site.baseurl }}/assets/js/theme-toggle.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/mobile-menu.js"></script>
 </body>
 </html>
