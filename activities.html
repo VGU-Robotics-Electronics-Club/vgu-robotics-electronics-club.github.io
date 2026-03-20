@@ -1,22 +1,39 @@
 ---
 layout: default
-title: Activities & Events
+title: Activities & Workshops
 permalink: /activities/
 ---
-<div class="container mx-auto px-4 py-24 mb-16">
-    <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold font-tech text-white uppercase tracking-wider">
-            Activities <span class="text-recOrange">& Events</span>
+
+<div class="container mx-auto px-4 py-16 mb-8">
+    <div class="text-center mb-8">
+        <h1 class="text-4xl md:text-5xl font-bold font-tech text-white uppercase tracking-wider">
+            Activities <span class="text-recOrange">& Workshops</span>
+        </h1>
+        <div class="w-24 h-1 bg-gradient-to-r from-recBlue to-recOrange mx-auto mt-4 mb-6"></div>
+        <p class="text-gray-400 font-sans max-w-2xl mx-auto">Browse REC's events, tournaments, and hands-on technical workshops.</p>
+    </div>
+
+    <div class="flex justify-center gap-4 mb-12">
+        <a href="#events" class="px-6 py-2 bg-surface border border-gray-700 text-gray-200 rounded-sm hover:border-recOrange hover:text-white">Events & Activities</a>
+        <a href="#workshops" class="px-6 py-2 bg-surface border border-gray-700 text-gray-200 rounded-sm hover:border-recOrange hover:text-white">Workshops</a>
+    </div>
+</div>
+
+<!-- Events & Activities Section -->
+<section id="events" class="container mx-auto px-4 py-12 mb-16">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold font-tech text-white uppercase tracking-wider">
+            Events & <span class="text-recBlue">Activities</span>
         </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-recBlue to-recOrange mx-auto mt-4 mb-4"></div>
-        <p class="text-gray-400 font-sans max-w-2xl mx-auto">REC's iconic annual tournaments, and networking activities.</p>
+        <div class="w-20 h-1 bg-gradient-to-r from-recBlue to-recOrange mx-auto mt-4 mb-4"></div>
+        <p class="text-gray-400 font-sans max-w-2xl mx-auto">REC's iconic annual tournaments, showcases, and community activities.</p>
     </div>
 
     <div class="flex flex-wrap -mx-4">
         {% assign sorted_activities = site.activities | sort: 'date' | reverse %}
         {% for activity in sorted_activities %}
         <div class="w-full md:w-1/3 px-4 mb-8">
-            <a href="{{ site.baseurl }}{{ activity.url }}" class="block h-full block">
+            <a href="{{ site.baseurl }}{{ activity.url }}" class="block h-full">
                 <div class="bg-surface border-tech p-6 rounded-md group h-full cursor-pointer hover:-translate-y-2 transition-transform duration-300">
                     {% if activity.image %}
                     <div class="relative h-64 w-full mb-6 overflow-hidden rounded clip-tech bg-dark flex items-center justify-center p-2">
@@ -33,4 +50,37 @@ permalink: /activities/
         </div>
         {% endfor %}
     </div>
-</div>
+</section>
+
+<!-- Workshops Section -->
+<section id="workshops" class="container mx-auto px-4 py-12 mb-16">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold font-tech text-white uppercase tracking-wider">
+            Technical <span class="text-recOrange">Workshops</span>
+        </h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-recBlue to-recOrange mx-auto mt-4 mb-4"></div>
+        <p class="text-gray-400 font-sans max-w-2xl mx-auto">Hands-on sessions and seminars to build practical engineering skills.</p>
+    </div>
+
+    <div class="flex flex-wrap -mx-4">
+        {% assign sorted_workshops = site.workshops | sort: 'date' | reverse %}
+        {% for workshop in sorted_workshops %}
+        <div class="w-full md:w-1/3 px-4 mb-8">
+            <a href="{{ site.baseurl }}{{ workshop.url }}" class="block h-full">
+                <div class="bg-surface border-tech p-6 rounded-md group h-full cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                    {% if workshop.image %}
+                    <div class="relative h-64 w-full mb-6 overflow-hidden rounded clip-tech bg-dark flex items-center justify-center p-2">
+                        <img src="{{ site.baseurl }}/assets/images/{{ workshop.image }}" alt="{{ workshop.title }}" class="max-h-full max-w-full object-contain img-hover-zoom drop-shadow-[0_0_15px_rgba(61,184,232,0.3)]" onerror="this.src='https://placehold.co/400x400/0D0D14/3DB8E8?text={{ workshop.title | url_encode }}'">
+                    </div>
+                    {% endif %}
+                    <h3 class="text-2xl font-bold font-tech text-white mb-2 group-hover:text-recOrange transition-colors uppercase">{{ workshop.title }}</h3>
+                    <p class="text-gray-400 font-sans text-sm mb-4">{{ workshop.excerpt | strip_html | truncatewords: 20 }}</p>
+                    <span class="text-recBlue font-tech tracking-wider text-sm font-semibold flex items-center gap-2 mt-auto">
+                        DETAILS <span class="group-hover:translate-x-2 transition-transform">→</span>
+                    </span>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
