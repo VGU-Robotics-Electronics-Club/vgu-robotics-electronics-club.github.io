@@ -39,12 +39,7 @@
                     <a href="{{ site.baseurl }}/materials/" class="text-{% if page.url == '/materials/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">MATERIALS</a>
                     <a href="{{ site.baseurl }}/about/" class="text-{% if page.url == '/about/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">ABOUT</a>
                 </div>
-                <!-- CTA Button -->
-                <div class="hidden md:block">
-                    <a href="{{ site.baseurl }}/contact" class="bg-recOrange text-white font-tech text-lg px-6 py-2 rounded-sm clip-tech glow-orange transition-all duration-300 font-semibold tracking-wider hover:bg-orange-600">
-                        CONTACT US
-                    </a>
-                </div>
+                <!-- CTA removed: contact moved into About page -->
                 <!-- Mobile hamburger -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button" aria-label="Open menu" class="p-2 rounded-md hover:bg-gray-700/40">
@@ -86,7 +81,7 @@
                 <a href="{{ site.baseurl }}/projects/" class="text-gray-300 hover:text-white">PROJECTS</a>
                 <a href="{{ site.baseurl }}/materials/" class="text-gray-300 hover:text-white">MATERIALS</a>
                 <a href="{{ site.baseurl }}/about/" class="text-gray-300 hover:text-white">ABOUT</a>
-                <a href="{{ site.baseurl }}/contact/" class="mt-4 inline-block bg-recOrange text-white font-tech text-lg px-6 py-2 rounded-sm">CONTACT US</a>
+                <!-- mobile contact link removed: contact merged into About -->
             </nav>
         </div>
     </div>
