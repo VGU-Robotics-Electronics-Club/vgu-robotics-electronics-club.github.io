@@ -191,10 +191,8 @@ With a mission to inspire passion for science and technology, REC serves as a pl
 
     <div id="chart-{{ yr }}" class="org-chart {% if yr != latest_year %}hidden{% endif %}">
         
-        <!-- LEVEL 1 & 2: LEADERSHIP BOARD (Thẻ to) -->
-        <h3 class="text-2xl font-tech font-bold text-white mb-6 border-l-4 border-recOrange pl-3">Board of Management</h3>
         
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-8">
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 md:gap-5 mb-8">
             {% for b in members.board %}
                 {% assign role_downcase = b.role | downcase %}
                 {% assign dept_downcase = b.department | downcase %}
@@ -202,7 +200,7 @@ With a mission to inspire passion for science and technology, REC serves as a pl
                 {% assign dColor = "text-gray-300" %}
                 {% assign dBorder = "hover:border-gray-500 hover:shadow-[0_0_20px_rgba(107,114,128,0.15)]" %}
                 
-                {% if role_downcase contains "president" and role_downcase contains "vice" == false %}
+                {% if role_downcase contains "president"%}
                     {% assign dColor = "text-recOrange" %}
                     {% assign dBorder = "hover:border-recOrange hover:shadow-[0_0_20px_rgba(240,90,53,0.15)]" %}
                 {% elsif role_downcase contains "vice president" %}
@@ -233,18 +231,18 @@ With a mission to inspire passion for science and technology, REC serves as a pl
                         {% if img_src != "fallback" %}
                         <img src="{{ img_src | relative_url }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         {% endif %}
-                        <span class="text-5xl font-tech font-bold text-gray-700 uppercase {% if img_src != "fallback" %}hidden{% endif %}">{{ b.name | truncatewords: 2, "" | replace: " ", "" | slice: 0, 2 }}</span>
+                        <span class="text-4xl md:text-5xl font-sans font-bold text-gray-700 uppercase {% if img_src != "fallback" %}hidden{% endif %}">{{ b.name | truncatewords: 2, "" | replace: " ", "" | slice: 0, 2 }}</span>
                     </div>
-                    <div class="p-4 relative">
-                        <h4 class="text-white font-tech font-bold text-lg truncate group-hover:{{ dColor | replace: 'text-', '' | replace: '-400', ' text-purple-400' | replace: '-500', ' text-green-500' }} transition-colors">{{ b.name }}</h4>
-                        <p class="{{ dColor }} text-xs font-bold uppercase tracking-wider truncate mt-1">{{ b.role }}</p>
+                    <div class="p-3 relative bg-surface">
+                        <h4 class="text-white font-sans font-bold text-sm md:text-base line-clamp-2 leading-tight min-h-[2.5rem] group-hover:{{ dColor | replace: 'text-', '' | replace: '-400', ' text-purple-400' | replace: '-500', ' text-green-500' }} transition-colors">{{ b.name }}</h4>
+                        <p class="{{ dColor }} text-[10px] md:text-xs font-bold uppercase tracking-wider truncate mt-1">{{ b.role }}</p>
                     </div>
                 </div>
             {% endfor %}
         </div>
 
         <!-- DETAIL PANEL -->
-        <div id="org-detail-panel-{{ yr }}" class="hidden w-full bg-[#1e1e2d] border-l-4 border-recOrange rounded-r-lg p-6 md:p-8 mb-16 shadow-2xl transition-all duration-500 mt-4">
+        <div id="org-detail-panel-{{ yr }}" class="hidden w-full bg-[#1e1e2d] border-l-4 border-recOrange rounded-r-lg p-6 md:p-8 mt-4 shadow-2xl transition-all duration-500">
             <div class="flex flex-col md:flex-row gap-8 items-start relative">
                 <!-- Close Button -->
                 <button onclick="closeOrgDetails('{{ yr }}')" class="absolute top-0 right-0 p-2 text-gray-400 hover:text-white bg-darker rounded-md border border-gray-700 hover:border-recOrange transition-colors z-10">
@@ -255,13 +253,13 @@ With a mission to inspire passion for science and technology, REC serves as a pl
                     <div class="aspect-[3/4] rounded-md overflow-hidden bg-darker border border-gray-700 relative" id="detail-img-container-{{ yr }}">
                         <img id="detail-img-{{ yr }}" src="" class="w-full h-full object-cover hidden">
                         <div id="detail-fallback-{{ yr }}" class="w-full h-full flex items-center justify-center hidden bg-gradient-to-br from-surface to-dark">
-                            <span id="detail-fallback-text-{{ yr }}" class="text-7xl font-tech font-bold text-gray-700"></span>
+                            <span id="detail-fallback-text-{{ yr }}" class="text-7xl font-sans font-bold text-gray-700"></span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="w-full md:w-2/3 flex flex-col pt-2">
-                    <h3 id="detail-name-{{ yr }}" class="text-3xl md:text-4xl font-bold font-tech text-white mb-1">Name</h3>
+                    <h3 id="detail-name-{{ yr }}" class="text-3xl md:text-4xl font-bold font-sans text-white mb-1">Name</h3>
                     <p id="detail-role-{{ yr }}" class="text-lg font-bold uppercase tracking-wider mb-2 text-recOrange">Role</p>
                     <p id="detail-dept-{{ yr }}" class="text-sm text-gray-400 font-sans mb-6 border-b border-gray-700 pb-4 inline-block">Department</p>
                     <p id="detail-bio-{{ yr }}" class="text-gray-300 font-sans leading-relaxed text-base">Bio</p>
@@ -270,8 +268,9 @@ With a mission to inspire passion for science and technology, REC serves as a pl
         </div>
 
         <!-- LEVEL 3: DEPARTMENT MEMBERS -->
-        {% assign deptNames = "Technical,Academic,Media,Secretary" | split: "," %}
+        {% assign deptNames = "Technical,Academic,Media,Logistics" | split: "," %}
         
+        <div class="space-y-10 mt-12">
         {% for dName in deptNames %}
             {% assign current_dept = dName | downcase %}
             {% assign has_members = false %}
@@ -283,47 +282,115 @@ With a mission to inspire passion for science and technology, REC serves as a pl
             {% endfor %}
             
             {% if has_members %}
-            <h3 class="text-xl font-tech font-bold text-gray-300 mb-6 border-l-4 border-gray-600 pl-3 mt-12">{{ dName }} {% if dName != "Secretary" %}Department{% endif %}</h3>
-            
-            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 relative z-10 mb-8 org-grid">
-                {% for m in members.member %}
-                    {% assign m_dept = m.department | downcase %}
-                    {% if m_dept contains current_dept %}
+                {% assign bgLineClass = "bg-gray-500" %}
+                {% assign bgDotClass = "bg-gray-500" %}
+                {% assign textLeadershipClass = "text-gray-400" %}
+                {% assign hoverBorderClass = "hover:border-gray-400" %}
+                {% assign dataColor = "text-gray-300" %}
+
+                {% if current_dept contains "technical" %}
+                    {% assign bgLineClass = "bg-recOrange" %}
+                    {% assign bgDotClass = "bg-recOrange glow-orange" %}
+                    {% assign textLeadershipClass = "text-recOrange" %}
+                    {% assign hoverBorderClass = "hover:border-recOrange" %}
+                    {% assign dataColor = "text-recOrange" %}
+                {% elsif current_dept contains "academic" %}
+                    {% assign bgLineClass = "bg-green-500" %}
+                    {% assign bgDotClass = "bg-green-500 glow-green shadow-[0_0_10px_#4ade80]" %}
+                    {% assign textLeadershipClass = "text-green-500" %}
+                    {% assign hoverBorderClass = "hover:border-green-500" %}
+                    {% assign dataColor = "text-green-500" %}
+                {% elsif current_dept contains "media" %}
+                    {% assign bgLineClass = "bg-purple-500" %}
+                    {% assign bgDotClass = "bg-purple-500 shadow-[0_0_10px_#a855f7]" %}
+                    {% assign textLeadershipClass = "text-purple-400" %}
+                    {% assign hoverBorderClass = "hover:border-purple-400" %}
+                    {% assign dataColor = "text-purple-400" %}
+                {% endif %}
+
+                <div class="bg-surface/20 border border-gray-800/60 rounded-xl p-5 md:p-6 relative overflow-hidden grid grid-cols-1">
+                    <div class="absolute top-0 left-0 w-1.5 h-full {{ bgLineClass }}"></div>
+                    <h3 class="text-2xl font-tech font-bold text-white mb-6 flex items-center gap-3">
+                        <span class="w-2.5 h-2.5 rounded-sm {{ bgDotClass }}"></span> {{ dName }} {% if dName != "Secretary" %}Department{% endif %}
+                    </h3>
                     
-                        {% assign img = m.image %}
-                        {% assign img_src = "fallback" %}
-                        {% if img and img != "" %}{% if img contains "http" or img contains "/" %}{% assign img_src = img %}{% else %}{% assign img_src = "/assets/images/members/" | append: yr | append: "/" | append: img %}{% endif %}{% endif %}
-                        {% assign big_img = m.big_image %}
-                        {% assign big_img_src = img_src %}
-                        {% if big_img and big_img != "" %}{% if big_img contains "http" or big_img contains "/" %}{% assign big_img_src = big_img %}{% else %}{% assign big_img_src = "/assets/images/members/" | append: yr | append: "/" | append: big_img %}{% endif %}{% endif %}
-                        
-                        {% assign overrideColor = "text-gray-300" %}
-                        {% if current_dept contains "technical" %} {% assign overrideColor = "text-recOrange" %} 
-                        {% elsif current_dept contains "academic" %} {% assign overrideColor = "text-green-500" %}
-                        {% elsif current_dept contains "media" %} {% assign overrideColor = "text-purple-400" %}
-                        {% endif %}
-                        
-                        {% assign dNameDisplay = m.department | default: "Member" %}
-                        
-                        <div class="leadership-card bg-surface/40 border border-gray-800 rounded-md overflow-hidden cursor-pointer hover:border-gray-500 hover:bg-surface/80 transition-all duration-200 group"
-                             onclick="showOrgDetails(this, '{{ yr }}')"
-                             data-name="{{ m.name }}" data-role="Member" data-dept="{{ dNameDisplay }}" data-img="{{ img_src | relative_url }}" data-big-img="{{ big_img_src | relative_url }}" data-color="{{ overrideColor }}" data-bio="{{ m.description | default: 'Club member' | escape }}">
-                            <div class="aspect-[3/4] overflow-hidden relative bg-darker flex items-center justify-center">
-                                {% if img_src != "fallback" %}
-                                <img src="{{ img_src | relative_url }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                                {% endif %}
-                                <span class="text-3xl font-tech font-bold text-gray-700 uppercase {% if img_src != "fallback" %}hidden{% endif %}">{{ m.name | truncatewords: 2, "" | replace: " ", "" | slice: 0, 2 }}</span>
+                    <div class="flex flex-col lg:flex-row gap-8 w-full">
+                        <!-- Leadership -->
+                        <div class="w-full lg:w-5/12">
+                            <div class="mb-4 border-b border-gray-800 pb-2 flex justify-between items-end">
+                                <span class="text-xs font-tech font-bold {{ textLeadershipClass }} uppercase tracking-widest">Leadership</span>
                             </div>
-                            <div class="p-2 border-t border-gray-800 text-center">
-                                <h4 class="text-gray-200 font-tech font-bold text-xs truncate group-hover:text-white">{{ m.name }}</h4>
-                                <p class="text-gray-500 text-[9px] uppercase tracking-wider truncate mt-0.5">{{ dNameDisplay }}</p>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                {% for m in members.member %}
+                                    {% assign m_dept = m.department | downcase %}
+                                    {% assign m_role_down = m.role | default: "" | downcase %}
+                                    {% if m_dept contains current_dept and m_role_down contains "head" %}
+                                        
+                                        {% assign img = m.image %}
+                                        {% assign img_src = "fallback" %}
+                                        {% if img and img != "" %}{% if img contains "http" or img contains "/" %}{% assign img_src = img %}{% else %}{% assign img_src = "/assets/images/members/" | append: yr | append: "/" | append: img %}{% endif %}{% endif %}
+                                        {% assign big_img = m.big_image %}
+                                        {% assign big_img_src = img_src %}
+                                        {% if big_img and big_img != "" %}{% if big_img contains "http" or big_img contains "/" %}{% assign big_img_src = big_img %}{% else %}{% assign big_img_src = "/assets/images/members/" | append: yr | append: "/" | append: big_img %}{% endif %}{% endif %}
+                                        
+                                        <div class="leadership-card bg-surface/80 border border-gray-700 rounded-lg overflow-hidden cursor-pointer {{ hoverBorderClass }} hover:-translate-y-1 transition-all duration-300 group"
+                                             onclick="showOrgDetails(this, '{{ yr }}')"
+                                             data-name="{{ m.name }}" data-role="{{ m.role }}" data-dept="{{ m.department | default: dName }}" data-img="{{ img_src | relative_url }}" data-big-img="{{ big_img_src | relative_url }}" data-color="{{ dataColor }}" data-bio="{{ m.description | default: 'Club member' | escape }}">
+                                            <div class="aspect-[3/4] overflow-hidden relative bg-gradient-to-b from-darker to-surface flex items-center justify-center">
+                                                {% if img_src != "fallback" %}
+                                                <img src="{{ img_src | relative_url }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                                {% endif %}
+                                                <span class="text-2xl md:text-3xl font-sans font-bold text-gray-600 group-hover:text-white/50 transition-colors {% if img_src != "fallback" %}hidden{% endif %}">{{ m.name | truncatewords: 2, "" | replace: " ", "" | slice: 0, 2 }}</span>
+                                            </div>
+                                            <div class="p-2.5 md:p-3 bg-surface border-t border-gray-800 group-hover:bg-dark transition-colors relative">
+                                                <h4 class="text-gray-100 font-sans font-bold text-xs md:text-sm line-clamp-2 leading-tight min-h-[2.5rem] group-hover:text-white">{{ m.name }}</h4>
+                                                <p class="{{ dataColor }} text-[9px] md:text-[10px] uppercase font-bold tracking-wider mt-1">{{ m.role | replace: 'Vice Head of Technical', 'Vice Head' | replace: 'Vice Head of Academic', 'Vice Head' | replace: 'Vice Head of Media', 'Vice Head' | replace: 'Head of Technical', 'Head' | replace: 'Head of Academic', 'Head' | replace: 'Head of Media', 'Head' }}</p>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                         </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
+
+                        <!-- Members -->
+                        <div class="w-full lg:w-7/12">
+                            <div class="mb-4 border-b border-gray-800 pb-2 flex justify-between items-end">
+                                <span class="text-xs font-tech font-bold text-gray-400 uppercase tracking-widest">Members</span>
+                            </div>
+                            <div class="max-h-60 md:max-h-80 overflow-y-auto pr-2 members-scrollbar">
+                                <div class="flex flex-wrap gap-2 md:gap-3">
+                                {% for m in members.member %}
+                                    {% assign m_dept = m.department | downcase %}
+                                    {% assign m_role_down = m.role | default: "" | downcase %}
+                                    {% assign is_head = false %}
+                                    {% if m_role_down contains "head" %}
+                                        {% assign is_head = true %}
+                                    {% endif %}
+                                    
+                                    {% if m_dept contains current_dept and is_head == false %}
+                                        
+                                        {% assign img = m.image %}
+                                        {% assign img_src = "fallback" %}
+                                        {% if img and img != "" %}{% if img contains "http" or img contains "/" %}{% assign img_src = img %}{% else %}{% assign img_src = "/assets/images/members/" | append: yr | append: "/" | append: img %}{% endif %}{% endif %}
+                                        {% assign big_img = m.big_image %}
+                                        {% assign big_img_src = img_src %}
+                                        {% if big_img and big_img != "" %}{% if big_img contains "http" or big_img contains "/" %}{% assign big_img_src = big_img %}{% else %}{% assign big_img_src = "/assets/images/members/" | append: yr | append: "/" | append: big_img %}{% endif %}{% endif %}
+                                        
+                                        <button class="leadership-card px-4 py-2 bg-darker border border-gray-700 {{ hoverBorderClass }} rounded-md text-sm font-sans text-gray-400 hover:text-white transition-all duration-300 shadow-sm"
+                                                onclick="showOrgDetails(this, '{{ yr }}')"
+                                                data-name="{{ m.name }}" data-role="{{ m.role | default: 'Member' }}" data-dept="{{ m.department | default: dName }}" data-img="{{ img_src | relative_url }}" data-big-img="{{ big_img_src | relative_url }}" data-color="{{ dataColor }}" data-bio="{{ m.description | default: 'Club member' | escape }}">
+                                            {{ m.name }}
+                                        </button>
+                                    {% endif %}
+                                {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             {% endif %}
         {% endfor %}
+        </div>
     </div>
     {% endfor %}
 </div>
@@ -342,23 +409,32 @@ With a mission to inspire passion for science and technology, REC serves as a pl
             <p class="text-gray-400 font-sans max-w-2xl mx-auto">Have questions, proposals, or want to collaborate? Connect with the Electronics and Robotics Club through our official channels.</p>
         </div>
 
-        <div class="flex flex-wrap justify-center gap-8 w-full max-w-4xl">
-            <a href="mailto:{{ site.email }}" class="w-full md:w-5/12 bg-surface border-tech p-8 rounded-md group hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+            <a href="mailto:{{ site.email }}" class="bg-surface border-tech p-8 rounded-md group hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center">
                 <div class="w-16 h-16 rounded-full bg-dark/50 border border-recOrange text-recOrange flex items-center justify-center mb-4 group-hover:bg-recOrange group-hover:text-white transition-colors duration-300 glow-orange">
                     <div class="icon-email h-8 w-8 bg-current"></div>
                 </div>
                 <h3 class="text-2xl font-bold font-tech text-white mb-2 uppercase">Email Us</h3>
-                <p class="text-recBlue font-sans text-lg break-all">{{ site.email }}</p>
+                <p class="text-recBlue font-sans text-base break-all">{{ site.email }}</p>
                 <p class="text-gray-500 font-sans text-sm mt-4">For formal inquiries and partnerships.</p>
             </a>
 
-            <a href="https://www.facebook.com/vgu.rec" target="_blank" rel="noopener noreferrer" class="w-full md:w-5/12 bg-surface border-tech p-8 rounded-md group hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center">
+            <a href="https://www.facebook.com/vgu.rec" target="_blank" rel="noopener noreferrer" class="bg-surface border-tech p-8 rounded-md group hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center">
                 <div class="w-16 h-16 rounded-full bg-dark/50 border border-blue-500 text-blue-500 flex items-center justify-center mb-4 group-hover:bg-blue-600 group-hover:border-blue-600 group-hover:text-white transition-colors duration-300 glow-blue group-hover:glow-blue">
                     <div class="icon-facebook h-8 w-8 bg-current"></div>
                 </div>
                 <h3 class="text-2xl font-bold font-tech text-white mb-2 uppercase">Facebook</h3>
-                <p class="text-blue-400 font-sans text-lg">VGU REC Facebook Page</p>
-                <p class="text-gray-500 font-sans text-sm mt-4">Follow us for weekly updates and direct chat.</p>
+                <p class="text-blue-400 font-sans text-base">VGU REC Facebook Page</p>
+                <p class="text-gray-500 font-sans text-sm mt-4">Follow us for updates and direct chat.</p>
+            </a>
+
+            <a href="https://www.linkedin.com/company/vgu-robotics-electronics-club-rec/" target="_blank" rel="noopener noreferrer" class="bg-surface border-tech p-8 rounded-md group hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-full bg-dark/50 border border-[#0077b5] text-[#0077b5] flex items-center justify-center mb-4 group-hover:bg-[#0077b5] group-hover:border-[#0077b5] group-hover:text-white transition-colors duration-300 shadow-[0_0_15px_rgba(0,119,181,0.4)] group-hover:shadow-[0_0_25px_rgba(0,119,181,0.6)]">
+                    <div class="icon-linkedin h-8 w-8 bg-current"></div>
+                </div>
+                <h3 class="text-2xl font-bold font-tech text-white mb-2 uppercase">LinkedIn</h3>
+                <p class="text-[#0077b5] font-sans text-base">VGU REC LinkedIn</p>
+                <p class="text-gray-500 font-sans text-sm mt-4">Connect with our network.</p>
             </a>
         </div>
     </div>

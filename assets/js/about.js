@@ -43,9 +43,18 @@ function showOrgDetails(cardElement, yr) {
     const bigImgSrc = cardElement.getAttribute("data-big-img") || imgSrc;
     const roleColorClass = cardElement.getAttribute("data-color") || "text-recOrange";
 
-    const gridContainer = cardElement.closest('.grid');
-    if (gridContainer) {
-        gridContainer.insertAdjacentElement('afterend', panel);
+    // Instead of inserting after grid (which breaks layout), insert it at the very bottom of the department section wrapper
+    const deptContainer = cardElement.closest('.bg-surface\\/20');
+    
+    if (deptContainer) {
+        // If cliked on a department member, append the panel at the end of the entire department container
+        deptContainer.insertAdjacentElement('afterend', panel);
+    } else {
+        // If clicked on Board of Management, append after the board's grid
+        const gridContainer = cardElement.closest('.grid');
+        if (gridContainer) {
+            gridContainer.insertAdjacentElement('afterend', panel);
+        }
     }
 
     document.getElementById("detail-name-" + yr).innerText = name;
@@ -54,7 +63,7 @@ function showOrgDetails(cardElement, yr) {
     roleEl.innerText = role;
     roleEl.className = "text-lg font-bold uppercase tracking-wider mb-2 " + roleColorClass;
     
-    panel.className = "w-full bg-[#1e1e2d] border-l-4 rounded-r-lg p-6 md:p-8 mb-16 shadow-2xl transition-all duration-500 border-" + roleColorClass.replace("text-", "");
+    panel.className = "w-full bg-[#1e1e2d] border-l-4 rounded-r-lg p-6 md:p-8 mt-4 shadow-2xl transition-all duration-500 border-" + roleColorClass.replace("text-", "");
 
     document.getElementById("detail-dept-" + yr).innerText = dept;
     document.getElementById("detail-bio-" + yr).innerText = bio;

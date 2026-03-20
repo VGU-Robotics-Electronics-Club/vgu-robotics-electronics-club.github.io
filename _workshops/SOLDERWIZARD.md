@@ -4,7 +4,7 @@ image: "workshops/SOLDERWIZARD/banner.jpg"
 date: 2025-11-06
 ---
 
-This REC Talk Show offered students valuable insights into studying and living in Germany, featuring guidance on DAAD applications, cost-saving tips, and opportunities for research and work. With the sharing of experienced speakers, participants gained a clearer understanding of both the challenges and opportunities of student life abroad. 
+The Solderwizard Workshop is an interactive session where participants learn essential soldering techniques and assemble their own electronic components. Through practical experience, the workshop enhances technical skills, problem-solving abilities, and confidence in working with hardware. 
 
 <div class="flex flex-col items-center gap-4">
   <img src="{{ site.baseurl }}/assets/images/workshops/SOLDERWIZARD/banner.jpg" alt="" class="rounded-md w-full h-auto object-cover shadow-lg border border-gray-800 hover:border-recOrange transition-colors aspect-[10/6]">

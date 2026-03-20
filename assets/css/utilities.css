@@ -33,7 +33,7 @@
 
 /* Reusable SVG Icons using CSS Mask */
 /* This allows Tailwind colors to colorize the SVG using 'bg-current', 'text-white' etc. */
-.icon-facebook, .icon-email {
+.icon-facebook, .icon-email, .icon-linkedin {
     display: inline-block;
     background-color: currentColor; /* Inherits text color */
 }
@@ -41,6 +41,11 @@
 .icon-facebook {
     mask: url('../images/icon/facebook.svg') no-repeat center / contain;
     -webkit-mask: url('../images/icon/facebook.svg') no-repeat center / contain;
+}
+
+.icon-linkedin {
+    mask: url('../images/icon/linkedin.svg') no-repeat center / contain;
+    -webkit-mask: url('../images/icon/linkedin.svg') no-repeat center / contain;
 }
 
 .icon-email {
@@ -53,4 +58,35 @@
 }
 .glow-blue:hover, .group:hover .group-hover\:glow-blue {
     box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+}
+
+/* Scrollable members list styling */
+.members-scrollbar {
+    /* small right padding so content doesn't sit under scrollbar */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Webkit scrollbar styling */
+.members-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+.members-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.members-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.06);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+/* Slightly darker thumb on hover */
+.members-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255,255,255,0.12);
+}
+
+/* Firefox scrollbar (uses scrollbar-width/property) */
+.members-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255,255,255,0.06) transparent;
 }

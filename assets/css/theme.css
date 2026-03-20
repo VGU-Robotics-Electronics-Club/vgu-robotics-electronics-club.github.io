@@ -268,21 +268,49 @@
 }
 
 /* Org chart / member card styles for light theme */
+[data-theme="light"] .bg-surface\/20 {
+    background-color: #ffffff !important;
+    border-color: rgba(15,23,42,0.08) !important;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.03) !important;
+}
+
 [data-theme="light"] .leadership-card {
     background-color: #ffffff !important;
-    border-color: rgba(15,23,42,0.06) !important;
-    box-shadow: 0 8px 24px rgba(15,23,42,0.04) !important;
+    border-color: rgba(15,23,42,0.08) !important;
+    box-shadow: 0 4px 16px rgba(15,23,42,0.04) !important;
     color: var(--text-primary) !important;
 }
 
+[data-theme="light"] button.leadership-card:hover {
+    background-color: #f8fafc !important;
+}
+
+/* Department-specific hover color overrides for member buttons */
+[data-theme="light"] button.leadership-card.hover\:border-recOrange:hover { color: var(--accent-orange) !important; border-color: var(--accent-orange) !important; }
+[data-theme="light"] button.leadership-card.hover\:border-green-500:hover { color: var(--accent-green) !important; border-color: var(--accent-green) !important; }
+[data-theme="light"] button.leadership-card.hover\:border-purple-400:hover { color: var(--accent-purple) !important; border-color: var(--accent-purple) !important; }
+[data-theme="light"] button.leadership-card.hover\:border-gray-400:hover { color: var(--text-secondary) !important; border-color: var(--border-primary) !important; }
+
+[data-theme="light"] .leadership-card > .bg-surface {
+    background-color: #ffffff !important;
+    border-top-color: rgba(15,23,42,0.06) !important;
+}
+
+[data-theme="light"] .leadership-card.group:hover > .group-hover\:bg-dark {
+    background-color: #f8fafc !important;
+}
+
 [data-theme="light"] .leadership-card .p-4,
+[data-theme="light"] .leadership-card .p-3,
+[data-theme="light"] .leadership-card .p-2\.5,
 [data-theme="light"] .leadership-card .p-2,
 [data-theme="light"] .leadership-card .p-6 {
     color: var(--text-primary) !important;
 }
 
 [data-theme="light"] .leadership-card h4,
-[data-theme="light"] .leadership-card .text-white {
+[data-theme="light"] .leadership-card .text-white,
+[data-theme="light"] .leadership-card.group:hover h4 {
     color: var(--text-primary) !important;
 }
 
@@ -301,13 +329,15 @@
 }
 
 [data-theme="light"] .leadership-card .text-5xl,
-[data-theme="light"] .leadership-card .text-3xl {
-    color: #6b7280 !important;
+[data-theme="light"] .leadership-card .text-4xl,
+[data-theme="light"] .leadership-card .text-3xl,
+[data-theme="light"] .leadership-card .text-2xl {
+    color: #9ca3af !important;
 }
 
 [data-theme="light"] .leadership-card:hover {
-    border-color: rgba(240,90,53,0.14) !important;
-    box-shadow: 0 12px 30px rgba(240,90,53,0.06) !important;
+    border-color: rgba(0,0,0,0.12) !important;
+    box-shadow: 0 12px 32px rgba(15,23,42,0.08) !important;
 }
 
 /* Org detail panel (right-side) adjustments for light theme */
@@ -409,7 +439,8 @@
 
 /* Icon elements should use current color and no extra background */
 [data-theme="light"] #contact-page .icon-email,
-[data-theme="light"] #contact-page .icon-facebook {
+[data-theme="light"] #contact-page .icon-facebook,
+[data-theme="light"] #contact-page .icon-linkedin {
     background-color: currentColor !important;
     width: 2rem !important;
     height: 2rem !important;

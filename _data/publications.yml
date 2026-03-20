@@ -8,7 +8,8 @@ publications:
       - name: "Huynh Nhat Nam"
         club_member: false
       - name: "Ho Dac Thao Van"
-        club_member: false
+        roles: ["President 2024 & 2025"]
+        club_member: true
       - name: "Huynh Thi Minh Nguyet"
         club_member: false
     year: 2025
