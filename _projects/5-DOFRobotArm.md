@@ -1,7 +1,7 @@
 ---
 title: "5-DOF Robot Arm"
 image: "projects/5-DOFRobotArm/0.png"
-members: "Nguyen Van A, Tran Thi B"
+members: ""
 description: "Smart home control system using ESP32 and IoT technology."
 date: 2025-09-10
 ---

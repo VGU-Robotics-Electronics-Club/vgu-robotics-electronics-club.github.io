@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VGU REC - Robotics & Electronics Club</title>
+    <!-- Tích hợp Tailwind CSS để style nhanh chóng -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0a0f',
+                        darker: '#050508',
+                        recOrange: '#F05A35',
+                        recBlue: '#3DB8E8',
+                        surface: '#151520'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Rajdhani', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0a0a0f; color: #ffffff; overflow-x: hidden; scroll-behavior: smooth; }
+        .glow-orange { box-shadow: 0 0 15px rgba(240, 90, 53, 0.4); }
+        .glow-orange:hover { box-shadow: 0 0 25px rgba(240, 90, 53, 0.7); }
+        .glow-green { box-shadow: 0 0 15px rgba(74, 222, 128, 0.4); }
+        .clip-tech { clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); }
+        .border-tech { position: relative; }
+        .border-tech::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            border: 1px solid rgba(240, 90, 53, 0.3); pointer-events: none; transition: all 0.3s ease;
+        }
+        .border-tech:hover::before { border-color: rgba(240, 90, 53, 0.8); box-shadow: inset 0 0 20px rgba(240, 90, 53, 0.2); }
+        .img-hover-zoom { transition: transform 0.5s ease; }
+        .group:hover .img-hover-zoom { transform: scale(1.05); }
+
+        /* Custom scrollbar for small areas */
+        .custom-scrollbar::-webkit-scrollbar { height: 4px; width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #151520; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #F05A35; }
+    </style>
+</head>
+<body class="antialiased selection:bg-recOrange selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-darker/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img class="h-10 w-auto mix-blend-screen" src="logo.png" alt="REC Logo" onerror="this.src='https://placehold.co/150x50/151520/F05A35?text=REC+LOGO'">
+                </div>
+                <div class="hidden md:flex space-x-8 font-tech text-lg tracking-wide">
+                    <a href="#" class="text-recOrange font-semibold transition-colors">TRANG CHỦ</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors">VỀ CHÚNG TÔI</a>
+                    <a href="#org-chart" class="text-gray-300 hover:text-white transition-colors">TỔ CHỨC</a>
+                    <a href="#achievements" class="text-gray-300 hover:text-white transition-colors">THÀNH TÍCH</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#" class="bg-recOrange text-white font-tech text-lg px-6 py-2 rounded-sm clip-tech glow-orange transition-all duration-300 font-semibold tracking-wider hover:bg-orange-600">
+                        THAM GIA NGAY
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-20 pb-32 flex content-center items-center justify-center min-h-[90vh]">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image: url('2026.jpg');">
+            <span class="w-full h-full absolute opacity-80 bg-gradient-to-b from-darker via-dark/90 to-dark"></span>
+        </div>
+        
+        <div class="container relative mx-auto px-4">
+            <div class="items-center flex flex-wrap">
+                <div class="w-full lg:w-8/12 px-4 mx-auto text-center">
+                    <div class="font-tech">
+                        <p class="text-recBlue font-semibold tracking-widest uppercase mb-2">VGU Robotics & Electronics Club</p>
+                        <h1 class="text-white font-bold text-5xl md:text-7xl mb-6 uppercase leading-tight drop-shadow-lg">
+                            Kiến tạo tương lai <br>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-recOrange to-yellow-500">Chinh phục công nghệ</span>
+                        </h1>
+                        <p class="mt-4 text-lg text-gray-300 font-sans max-w-2xl mx-auto mb-10">
+                            Nơi hội tụ của những đam mê bất tận với robot, vi mạch và sáng tạo không giới hạn. Cùng REC làm chủ công nghệ và rèn luyện bản lĩnh kỹ sư.
+                        </p>
+                        <div class="flex justify-center gap-4">
+                            <button class="bg-recOrange text-white font-tech text-xl px-8 py-3 rounded-sm clip-tech glow-orange transition-all hover:-translate-y-1">
+                                KHÁM PHÁ CÁC GIẢI ĐẤU
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-16" style="transform: translateZ(0);">
+            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                <polygon class="text-dark fill-current" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-dark relative border-b border-gray-800">
+        <div class="absolute inset-0 opacity-10" style="background-image: linear-gradient(#3DB8E8 1px, transparent 1px), linear-gradient(90deg, #3DB8E8 1px, transparent 1px); background-size: 50px 50px;"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-5/12 px-4 mr-auto ml-auto mb-10 md:mb-0">
+                    <div class="relative flex flex-col min-w-0 break-words w-full shadow-2xl rounded-lg border-tech bg-surface clip-tech overflow-hidden group">
+                        <img alt="REC Space Logo" src="logo.jpg" class="w-full align-middle img-hover-zoom" onerror="this.src='https://placehold.co/600x600/151520/F05A35?text=Space+Logo'">
+                    </div>
+                </div>
+                <div class="w-full md:w-6/12 px-4 mr-auto ml-auto">
+                    <h3 class="text-4xl mb-2 font-semibold leading-normal font-tech text-white uppercase">
+                        Về Lò Rèn <span class="text-recOrange">REC</span>
+                    </h3>
+                    <div class="w-16 h-1 bg-recOrange mb-6"></div>
+                    <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-300 font-sans">
+                        Thành lập tại Đại học Việt Đức (VGU), Robotics & Electronics Club là sân chơi học thuật chuyên nghiệp nhất dành cho sinh viên đam mê kỹ thuật.
+                    </p>
+                    <p class="text-lg font-light leading-relaxed mt-0 mb-8 text-gray-300 font-sans">
+                        Chúng tôi không chỉ học lý thuyết. Chúng tôi cầm mỏ hàn, viết code, thiết kế mạch và biến ý tưởng trên bản vẽ thành những cỗ máy chiến đấu thực thụ trên đấu trường.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Org Chart Section -->
+    <section id="org-chart" class="py-24 bg-dark relative border-t border-gray-800">
+        <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px); background-size: 40px 40px;"></div>
+        
+        <div class="container mx-auto px-4 relative z-10 max-w-7xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-tech text-white uppercase tracking-wider">
+                    Cơ Cấu <span class="text-recOrange">Tổ Chức</span>
+                </h2>
+                <div class="w-24 h-1 bg-gray-700 mx-auto mt-4 mb-4"></div>
+                <p class="text-gray-400 font-sans">Nhiệm kỳ 2025 - 2026</p>
+            </div>
+
+            <!-- LEVEL 1: BOARD OF MANAGEMENT -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-tech font-bold text-white mb-6 border-l-4 border-recOrange pl-3">Board of Management</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
+                    <!-- President -->
+                    <div class="leadership-card bg-surface/80 border border-gray-800 rounded-lg overflow-hidden cursor-pointer hover:border-recOrange hover:shadow-[0_0_20px_rgba(240,90,53,0.15)] transition-all duration-300 group"
+                         onclick="showOrgDetails(this)" data-name="Hồ Đắc Thảo Vân" data-role="President" data-dept="Board of Management" data-img="fallback" data-color="text-recOrange" data-bio="Quản lý và điều hành tổng thể các hoạt động của câu lạc bộ REC.">
+                        <div class="aspect-[3/4] overflow-hidden relative bg-gradient-to-b from-darker to-surface flex items-center justify-center">
+                            <span class="text-5xl font-tech font-bold text-gray-700 group-hover:text-recOrange/50 transition-colors">TV</span>
+                        </div>
+                        <div class="p-4 relative">
+                            <h4 class="text-white font-tech font-bold text-base md:text-lg line-clamp-2 leading-tight min-h-[2.5rem] group-hover:text-recOrange transition-colors">Hồ Đắc Thảo Vân</h4>
+                            <p class="text-recOrange text-[10px] md:text-xs font-bold uppercase tracking-wider mt-2">President</p>
+                        </div>
+                    </div>
+                    <!-- VP -->
+                    <div class="leadership-card bg-surface/80 border border-gray-800 rounded-lg overflow-hidden cursor-pointer hover:border-recBlue hover:shadow-[0_0_20px_rgba(61,184,232,0.15)] transition-all duration-300 group"
+                         onclick="showOrgDetails(this)" data-name="Huỳnh Phước Vĩnh" data-role="Vice President / Head of Tech" data-dept="Board of Management" data-img="fallback" data-color="text-recBlue" data-bio="Phó chủ tịch kiêm Trưởng ban Kỹ thuật.">
+                        <div class="aspect-[3/4] overflow-hidden relative bg-gradient-to-b from-darker to-surface flex items-center justify-center">
+                            <span class="text-5xl font-tech font-bold text-gray-700 group-hover:text-recBlue/50 transition-colors">PV</span>
+                        </div>
+                        <div class="p-4 relative">
+                            <h4 class="text-white font-tech font-bold text-base md:text-lg line-clamp-2 leading-tight min-h-[2.5rem] group-hover:text-recBlue transition-colors">Huỳnh Phước Vĩnh</h4>
+                            <p class="text-recBlue text-[10px] md:text-xs font-bold uppercase tracking-wider mt-2">VP / Head of Tech</p>
+                        </div>
+                    </div>
+                    <!-- Secretary -->
+                    <div class="leadership-card bg-surface/80 border border-gray-800 rounded-lg overflow-hidden cursor-pointer hover:border-gray-300 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] transition-all duration-300 group"
+                         onclick="showOrgDetails(this)" data-name="Cao Tuệ Anh" data-role="Secretary" data-dept="Board of Management" data-img="fallback" data-color="text-gray-300" data-bio="Thư ký câu lạc bộ, phụ trách giấy tờ và nhân sự.">
+                        <div class="aspect-[3/4] overflow-hidden relative bg-gradient-to-b from-darker to-surface flex items-center justify-center">
+                            <span class="text-5xl font-tech font-bold text-gray-700 group-hover:text-gray-300/50 transition-colors">TA</span>
+                        </div>
+                        <div class="p-4 relative">
+                            <h4 class="text-white font-tech font-bold text-base md:text-lg line-clamp-2 leading-tight min-h-[2.5rem] group-hover:text-gray-300 transition-colors">Cao Tuệ Anh</h4>
+                            <p class="text-gray-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mt-2">Secretary</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DETAIL PANEL -->
+            <div id="org-detail-panel" class="hidden w-full bg-[#1e1e2d] border-l-4 border-recOrange rounded-r-lg p-6 md:p-8 my-10 shadow-2xl transition-all duration-500 relative z-20">
+                <div class="flex flex-col md:flex-row gap-8 items-start relative">
+                    <button onclick="closeOrgDetails()" class="absolute top-0 right-0 p-2 text-gray-400 hover:text-white bg-darker rounded-md border border-gray-700 hover:border-recOrange transition-colors z-10">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                    <div class="w-full md:w-1/3 max-w-[250px] shrink-0">
+                        <div class="aspect-[3/4] rounded-md overflow-hidden bg-darker border border-gray-700 relative" id="detail-img-container">
+                            <img id="detail-img" src="" class="w-full h-full object-cover hidden">
+                            <div id="detail-fallback" class="w-full h-full flex items-center justify-center hidden bg-gradient-to-br from-surface to-dark">
+                                <span id="detail-fallback-text" class="text-7xl font-tech font-bold text-gray-700"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3 flex flex-col pt-2">
+                        <h3 id="detail-name" class="text-3xl md:text-4xl font-bold font-tech text-white mb-1">Name</h3>
+                        <p id="detail-role" class="text-lg font-bold uppercase tracking-wider mb-2 text-recOrange">Role</p>
+                        <p id="detail-dept" class="text-sm text-gray-400 font-sans mb-6 border-b border-gray-700 pb-4 inline-block">Department</p>
+                        <p id="detail-bio" class="text-gray-300 font-sans leading-relaxed text-base">Bio info...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEVEL 2: DEPARTMENTS (Demo ngắn gọn) -->
+            <div class="space-y-10 mt-12">
+                <!-- [ PHÒNG KỸ THUẬT - TECHNICAL ] -->
+                <div class="bg-surface/20 border border-gray-800/60 rounded-xl p-5 md:p-6 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1.5 h-full bg-recOrange"></div>
+                    <h3 class="text-2xl font-tech font-bold text-white mb-6 flex items-center gap-3">
+                        <span class="w-2.5 h-2.5 rounded-sm bg-recOrange glow-orange"></span> Technical Department
+                    </h3>
+                    
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <div class="w-full lg:w-4/12">
+                            <div class="mb-4 border-b border-gray-800 pb-2 flex justify-between items-end">
+                                <span class="text-xs font-tech font-bold text-recOrange uppercase tracking-widest">Leadership</span>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 md:gap-4">
+                                <div class="leadership-card bg-surface/80 border border-gray-700 rounded-lg overflow-hidden cursor-pointer hover:border-recOrange hover:-translate-y-1 transition-all duration-300 group"
+                                     onclick="showOrgDetails(this)" data-name="Phạm Đình Trung Hiếu" data-role="Vice Head of Technical" data-dept="Technical Dept" data-img="fallback" data-color="text-recOrange">
+                                    <div class="aspect-[3/4] overflow-hidden relative bg-gradient-to-b from-darker to-surface flex items-center justify-center">
+                                        <span class="text-3xl font-tech font-bold text-gray-600 group-hover:text-recOrange/50 transition-colors">TH</span>
+                                    </div>
+                                    <div class="p-3 bg-surface border-t border-gray-800 group-hover:bg-dark transition-colors relative">
+                                        <h4 class="text-gray-100 font-tech font-bold text-[14px] line-clamp-2 leading-tight min-h-[2.5rem]">Phạm Đình Trung Hiếu</h4>
+                                        <p class="text-recOrange text-[10px] uppercase font-bold tracking-wider mt-1.5">Vice Head</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="w-full lg:w-8/12">
+                            <div class="mb-4 border-b border-gray-800 pb-2 flex justify-between items-end">
+                                <span class="text-xs font-tech font-bold text-gray-400 uppercase tracking-widest">Members</span>
+                                <span class="text-[10px] text-gray-500 font-sans">Active Members</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 md:gap-3">
+                                <script>
+                                    const members = ["Lê Quốc Khánh", "Trần Văn Minh", "Đào Nhật Anh", "Vũ Đức Duy", "Ngô Bảo Châu"];
+                                    members.forEach(m => {
+                                        document.write(`
+                                        <button class="leadership-card px-4 py-2 bg-darker border border-gray-700 hover:border-recOrange rounded-md text-sm font-sans text-gray-400 hover:text-white transition-all duration-300 shadow-sm"
+                                                onclick="showOrgDetails(this)" data-name="${m}" data-role="Technical Member" data-dept="Technical Dept" data-img="fallback" data-color="text-recOrange">
+                                            ${m}
+                                        </button>
+                                        `);
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- ACHIEVEMENTS TIMELINE SECTION (BẢNG VÀNG THÀNH TÍCH TỐI GIẢN) -->
+    <!-- ============================================================== -->
+    <section id="achievements" class="py-24 bg-darker relative border-t border-gray-800">
+        <!-- Background Decor -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-recBlue/5 to-transparent pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 relative z-10 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-tech text-white uppercase tracking-wider">
+                    Bảng Vàng <span class="text-transparent bg-clip-text bg-gradient-to-r from-recOrange to-yellow-500">Thành Tích</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-recOrange to-yellow-500 mx-auto mt-4 mb-4"></div>
+                <p class="text-gray-400 font-sans max-w-2xl mx-auto">Những dấu ấn tự hào của thành viên REC qua các năm thi đấu trên mọi mặt trận công nghệ.</p>
+            </div>
+
+            <!-- TIMELINE CONTAINER -->
+            <div class="relative border-l-2 border-gray-800 md:ml-6 ml-3 pl-6 md:pl-10 space-y-16">
+
+                <!-- [ NĂM 2025 ] -->
+                <div class="relative group">
+                    <!-- Marker trên Timeline -->
+                    <div class="absolute -left-[31px] md:-left-[47px] top-0 w-5 h-5 md:w-6 md:h-6 bg-darker border-4 border-recOrange rounded-full group-hover:bg-recOrange group-hover:shadow-[0_0_15px_#F05A35] transition-all duration-300"></div>
+                    
+                    <!-- Tiêu đề Năm -->
+                    <h3 class="text-3xl font-tech font-bold text-white mb-8 flex items-center gap-4">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-recOrange to-yellow-500 text-4xl">2025</span>
+                        <span class="h-px bg-gray-800 flex-1"></span>
+                    </h3>
+
+                    <!-- Danh sách Thành tích (Dạng Text Line) -->
+                    <div class="space-y-6">
+                        
+                        <!-- Item: Team Achievement -->
+                        <div class="relative pl-4 border-l-2 border-gray-700/50 hover:border-yellow-500 transition-colors">
+                            <div class="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-3 mb-1">
+                                <span class="text-yellow-500 text-sm font-bold uppercase tracking-wider whitespace-nowrap">🏆 Quán Quân</span>
+                                <span class="hidden md:inline text-gray-600 font-bold">-</span>
+                                <h4 class="text-xl font-tech font-bold text-white">VGU Soccerbot Championship 2025</h4>
+                            </div>
+                            <div class="text-gray-400 font-sans text-sm mt-1">
+                                <span class="text-gray-200 font-semibold">Đội REC Alpha:</span> Hoàng Nam (C), Lê Quốc Khánh, Đào Nhật Anh
+                            </div>
+                        </div>
+
+                        <!-- Item: Team Achievement -->
+                        <div class="relative pl-4 border-l-2 border-gray-700/50 hover:border-gray-300 transition-colors">
+                            <div class="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-3 mb-1">
+                                <span class="text-gray-300 text-sm font-bold uppercase tracking-wider whitespace-nowrap">🥈 Á Quân</span>
+                                <span class="hidden md:inline text-gray-600 font-bold">-</span>
+                                <h4 class="text-xl font-tech font-bold text-white">Giải đấu Robo Dohyo (Sumobot) Toàn Quốc</h4>
+                            </div>
+                            <div class="text-gray-400 font-sans text-sm mt-1">
+                                <span class="text-gray-200 font-semibold">Đội Titan X:</span> Trần Văn Minh (C), Vũ Đức Duy
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- [ NĂM 2024 ] -->
+                <div class="relative group mt-8">
+                    <!-- Marker trên Timeline -->
+                    <div class="absolute -left-[31px] md:-left-[47px] top-0 w-5 h-5 md:w-6 md:h-6 bg-darker border-4 border-recBlue rounded-full group-hover:bg-recBlue group-hover:shadow-[0_0_15px_#3DB8E8] transition-all duration-300"></div>
+                    
+                    <h3 class="text-3xl font-tech font-bold text-white mb-8 flex items-center gap-4">
+                        <span class="text-recBlue text-4xl">2024</span>
+                        <span class="h-px bg-gray-800 flex-1"></span>
+                    </h3>
+
+                    <div class="space-y-6">
+                        
+                        <!-- Item: Team Achievement -->
+                        <div class="relative pl-4 border-l-2 border-gray-700/50 hover:border-recBlue transition-colors">
+                            <div class="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-3 mb-1">
+                                <span class="text-recBlue text-sm font-bold uppercase tracking-wider whitespace-nowrap">🚀 Giải Thiết Kế Sáng Tạo</span>
+                                <span class="hidden md:inline text-gray-600 font-bold">-</span>
+                                <h4 class="text-xl font-tech font-bold text-white">VGU Water Rocket Competition</h4>
+                            </div>
+                            <div class="text-gray-400 font-sans text-sm mt-1">
+                                <span class="text-gray-200 font-semibold">Đội Apollo:</span> Nguyễn Trần Nam Phương, Hà Gia Bảo
+                            </div>
+                        </div>
+
+                        <!-- Item: Individual Achievement -->
+                        <div class="relative pl-4 border-l-2 border-gray-700/50 hover:border-green-400 transition-colors">
+                            <div class="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-3 mb-1">
+                                <span class="text-green-400 text-sm font-bold uppercase tracking-wider whitespace-nowrap">🏅 Giải Xuất Sắc Cá Nhân</span>
+                                <span class="hidden md:inline text-gray-600 font-bold">-</span>
+                                <h4 class="text-xl font-tech font-bold text-white">Hackathon: IoT & Hệ Thống Nhúng Toàn Thành</h4>
+                            </div>
+                            <div class="text-gray-400 font-sans text-sm mt-1">
+                                <span class="text-gray-200 font-semibold">Cá nhân:</span> Phạm Đình Trung Hiếu
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Mini CTA Section (Sử dụng STANDEE) -->
+    <section class="relative py-20 bg-darker overflow-hidden border-t border-b border-recOrange/30">
+        <div class="absolute inset-0 z-0 opacity-20 bg-cover bg-center" style="background-image: url('STANDEE.jpg');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-darker via-dark/90 to-transparent z-0"></div>
+        
+        <div class="container mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-8 md:mb-0 max-w-2xl">
+                <h2 class="text-3xl md:text-5xl font-tech font-bold uppercase text-white mb-4">
+                    Sẵn sàng cầm <span class="text-recOrange text-transparent bg-clip-text bg-gradient-to-r from-recOrange to-yellow-500">Tay Cầm</span> lên chưa?
+                </h2>
+                <p class="text-gray-300 text-lg font-sans">
+                    Tham gia REC ngay hôm nay, tìm kiếm đồng đội và bắt đầu chế tạo robot của riêng bạn. Giải đấu 2026 đang gọi tên bạn!
+                </p>
+            </div>
+            <div>
+                <button class="bg-recOrange text-white font-tech text-2xl px-10 py-4 rounded-sm clip-tech glow-orange transition-all hover:scale-105 uppercase tracking-wider">
+                    ĐĂNG KÝ THÀNH VIÊN
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker pt-16 pb-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <img class="h-12 w-auto mb-6 mx-auto mix-blend-screen" src="logo.png" alt="REC Logo" onerror="this.src='https://placehold.co/150x50/151520/F05A35?text=REC+LOGO'">
+            <div class="text-sm text-gray-500 font-sans font-semibold py-1 border-t border-gray-800 pt-6">
+                Copyright © 2026 VGU REC. Design by AI Theme.
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT ĐIỀU KHIỂN BẢNG THÔNG TIN ORG CHART (Đã viết ở các bước trước) -->
+    <script>
+        let currentActiveCard = null;
+
+        function showOrgDetails(cardElement) {
+            const panel = document.getElementById('org-detail-panel');
+            
+            if (currentActiveCard === cardElement) {
+                closeOrgDetails();
+                return;
+            }
+
+            if (currentActiveCard) {
+                currentActiveCard.classList.remove('ring-2', 'ring-offset-2', 'ring-offset-dark', 'ring-recOrange', 'scale-105');
+            }
+
+            cardElement.classList.add('ring-2', 'ring-offset-2', 'ring-offset-dark', 'ring-recOrange', 'scale-105');
+            currentActiveCard = cardElement;
+
+            const name = cardElement.getAttribute('data-name');
+            const role = cardElement.getAttribute('data-role');
+            const dept = cardElement.getAttribute('data-dept');
+            const bio = cardElement.getAttribute('data-bio');
+            const imgSrc = cardElement.getAttribute('data-img');
+            const roleColorClass = cardElement.getAttribute('data-color') || 'text-recOrange';
+
+            document.getElementById('detail-name').innerText = name;
+            const roleEl = document.getElementById('detail-role');
+            roleEl.innerText = role;
+            roleEl.className = `text-lg font-bold uppercase tracking-wider mb-2 ${roleColorClass}`;
+            
+            panel.className = `w-full bg-[#1e1e2d] border-l-4 rounded-r-lg p-6 md:p-8 my-10 shadow-2xl transition-all duration-500 relative z-20 border-${roleColorClass.replace('text-', '')}`;
+
+            document.getElementById('detail-dept').innerText = dept;
+            document.getElementById('detail-bio').innerText = bio;
+
+            const imgEl = document.getElementById('detail-img');
+            const fallbackEl = document.getElementById('detail-fallback');
+            const fallbackTextEl = document.getElementById('detail-fallback-text');
+
+            if (imgSrc && imgSrc !== 'fallback') {
+                imgEl.src = imgSrc;
+                imgEl.classList.remove('hidden');
+                fallbackEl.classList.add('hidden');
+            } else {
+                imgEl.classList.add('hidden');
+                fallbackEl.classList.remove('hidden');
+                
+                // Lấy 2 chữ cái đầu của Tên và Họ
+                const nameParts = name.split(' ');
+                let initials = '';
+                if(nameParts.length >= 2) {
+                    initials = nameParts[0][0] + nameParts[nameParts.length-1][0];
+                } else {
+                    initials = name.substring(0, 2);
+                }
+                fallbackTextEl.innerText = initials.toUpperCase();
+            }
+
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+                panel.style.opacity = '0';
+                setTimeout(() => { panel.style.opacity = '1'; }, 50);
+            }
+
+            // Scroll nhẹ xuống để người dùng thấy panel
+            setTimeout(() => {
+                const yOffset = -100; // Cách đỉnh màn hình 100px
+                const y = panel.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }, 100);
+        }
+
+        function closeOrgDetails() {
+            const panel = document.getElementById('org-detail-panel');
+            panel.classList.add('hidden');
+            
+            if (currentActiveCard) {
+                currentActiveCard.classList.remove('ring-2', 'ring-offset-2', 'ring-offset-dark', 'ring-recOrange', 'scale-105');
+                currentActiveCard = null;
+            }
+        }
+    </script>
+</body>
+</html>

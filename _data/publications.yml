@@ -16,7 +16,8 @@ publications:
     venue: "eBook Packages Intelligent Technologies and Robotics Intelligent Technologies and Robotics (R0) Springer Nature Proceedings excluding Computer Science"
     link: "https://doi.org/10.1007/978-3-031-50887-5_24"
     abstract: "Quality of service (QoS) measuring in mobile broadband networks has become a significant issue as a result of the rising awareness of QoS. This paper examines the quality of 4G Internet access at different locations inside Vietnamese-German University campus (VGU), in Vietnam, focusing on five key performance indicators (KPI) which are distinct by two mobile network operators (MNO) in Vietnam. To the best of our knowledge, there are many studies on evaluating quality of service (QoS) of mobile network signals, however, there is no extensive research on exploring 4G wireless mobile network at specific positions inside buildings. This paper provides radio frequency (RF) measurements and evaluation, with the experiments took place both indoors and outdoors and determines those operators performance based on stimulation results. Data was gathered from a walk test using QualiPoc installed in a smartphone and analyzed by a ROMES4 application. The study suggests that 4G signal quality is rather good but downloading speed is quite slow at ground level, and the higher building level the user goes, the worse the signal quality gets. Finally, the research group propose solution to enhance quality of the network quality inside VGU campus."
-    tags: ["AI", "Real-time Object Detection", "Distillation", "Research"]
+    tags: ["Mobile Network Operator", "Walk Test", "4G LTE Network", "Key Performance indicators"]
+
   - title: "A Real-time Vehicle Detection Pipeline with Data-centric Enhancements and Multi-stage DETR Distillation"
     authors:
       - name: "Huy Minh Nhat Nguyen"

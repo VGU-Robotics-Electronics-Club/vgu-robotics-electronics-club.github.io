@@ -26,15 +26,15 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
                     <a href="{{ site.baseurl }}/">
-                        <img class="h-10 w-auto mix-blend-screen" src="{{ site.baseurl }}/assets/images/logo.png" alt="REC Logo" onerror="this.src='https://placehold.co/150x50/151520/F05A35?text=REC+LOGO&font=Rajdhani'">
+                        <img class="h-10 w-auto" src="{{ site.baseurl }}/assets/images/logo.png" alt="REC Logo" onerror="this.src='https://placehold.co/150x50/151520/F05A35?text=REC+LOGO&font=Rajdhani'">
                     </a>
                 </div>
                 <!-- Nav Links -->
                 <div class="hidden md:flex space-x-8 font-tech text-lg tracking-wide">
                     <a href="{{ site.baseurl }}/" class="text-{% if page.url == '/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">HOME</a>
                     <a href="{{ site.baseurl }}/activities/" class="text-{% if page.url == '/activities/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">ACTIVITIES</a>
-                    <!-- WORKSHOPS removed (merged into Activities) -->
                     <a href="{{ site.baseurl }}/publications/" class="text-{% if page.url == '/publications/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">PUBLICATIONS</a>
+                    <a href="{{ site.baseurl }}/achievements/" class="text-{% if page.url == '/achievements/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">ACHIEVEMENTS</a>
                     <a href="{{ site.baseurl }}/projects/" class="text-{% if page.url == '/projects/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">PROJECTS</a>
                     <a href="{{ site.baseurl }}/materials/" class="text-{% if page.url == '/materials/' %}recOrange font-semibold{% else %}gray-300 hover:text-white{% endif %} transition-colors">MATERIALS</a>
                 </div>
@@ -77,6 +77,7 @@
                 <a href="{{ site.baseurl }}/activities/" class="text-gray-300 hover:text-white">ACTIVITIES</a>
                 <!-- WORKSHOPS removed (merged into Activities) -->
                 <a href="{{ site.baseurl }}/publications/" class="text-gray-300 hover:text-white">PUBLICATIONS</a>
+                    <a href="{{ site.baseurl }}/achievements/" class="text-gray-300 hover:text-white">ACHIEVEMENTS</a>
                 <a href="{{ site.baseurl }}/projects/" class="text-gray-300 hover:text-white">PROJECTS</a>
                 <a href="{{ site.baseurl }}/materials/" class="text-gray-300 hover:text-white">MATERIALS</a>
                 <!-- mobile contact link removed: contact merged into About -->
@@ -111,6 +112,7 @@
                                 <li><a class="hover:text-recOrange font-semibold block pb-2 text-sm" href="{{ site.baseurl }}/activities/">Activities</a></li>
                                 <!-- Workshops link removed (now merged into Activities page) -->
                                 <li><a class="hover:text-recOrange font-semibold block pb-2 text-sm" href="{{ site.baseurl }}/publications/">Publications</a></li>
+                                <li><a class="hover:text-recOrange font-semibold block pb-2 text-sm" href="{{ site.baseurl }}/achievements/">Achievements</a></li>
                                 <li><a class="hover:text-recOrange font-semibold block pb-2 text-sm" href="{{ site.baseurl }}/projects/">Projects</a></li>
                                 <li><a class="hover:text-recOrange font-semibold block pb-2 text-sm" href="{{ site.baseurl }}/materials/">Materials</a></li>
                             </ul>

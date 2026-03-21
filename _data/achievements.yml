@@ -1,0 +1,63 @@
+- title: "University Physics Competition 2024"
+  year: 2024
+  category: "Bronze Medal"
+  members:
+    - name: "Đỗ Lương Minh Hoàng"
+      club_member: true
+    - name: "Nguyễn Đỗ Nguyên"
+      club_member: true
+    - name: "Trần Nhật Minh"
+      club_member: false
+    - name: "Hồ Đắc Thảo Vân"
+      club_member: true
+    - name: "Nguyễn Phúc Trường Hưng"
+      club_member: true
+    - name: "Lê Huỳnh Văn Hóa"
+      club_member: true
+  link: "https://www.facebook.com/share/1KpPYdumEY/"
+
+- title: "Algebra - National Student Mathematical Olympiad 2025"
+  year: 2025
+  category: "Second Medal"
+  members:
+    - name: "Trần Trọng Nhân"
+      club_member: true
+  link: "https://www.facebook.com/share/1YVhr2Zbgu/"
+
+- title: "Analysis - National Student Mathematical Olympiad 2025"
+  year: 2025
+  category: "Third Medal"
+  members:
+    - name: "Đỗ Lương Minh Hoàng"
+      club_member: true
+  link: "https://www.facebook.com/share/1YVhr2Zbgu/"
+
+- title: "IEEE SPS Video and Image Processing Cup at ICIP 2024"
+  year: 2024
+  category: "First Runner-up"
+  team: "Ultrabot"
+  members:
+    - name: "Duong Tran Hai"
+      club_member: false
+    - name: "Huy Nguyen Minh Nhat"
+      club_member: true
+    - name: "Phuc Nguyen Song Thien"
+      club_member: false
+    - name: "Triet Dao Hoang Minh"
+      club_member: false
+  link: "https://www.facebook.com/share/p/17cdZWgX45/"
+
+- title: "ASCIS - Asean Student Contest on Information Security 2024"
+  year: 2024
+  category: "Consolation Prize"
+  team: "VGU2"
+  members:
+    - name: "Trần Duy Khang"
+      club_member: false
+    - name: "Phạm Trần Trường An"
+      club_member: false
+    - name: "Phạm Phú Tuấn Khoa"
+      club_member: false
+    - name: "Đặng Hữu Trung Sơn"
+      club_member: true
+  link: "https://www.facebook.com/share/p/15eSTwh5QRQ/"
