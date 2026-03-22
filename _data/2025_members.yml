@@ -5,33 +5,36 @@ board:
     role: "President"
     department: "Executive Board"
     description: "Student at Vietnamese-German University| Electrical & Computer Engineering Program."
+
   - name: "Huỳnh Phước Vinh"
     image: "https://placehold.co/400x500/151520/3DB8E8?text=H.V"
     role: "Vice President / Head of Technical"
     department: "Executive Board / Technical"
     description: "Vice President of REC"
+
   - name: "Đỗ Lương Minh Hoàng"
-    image: "https://placehold.co/400x500/151520/3DB8E8?text=Đ.H"
+    image: "DoLuongMinhHoang.jpg"
+    big_image: "DoLuongMinhHoang_big.jpg"
     role: "Vice President"
     department: "Executive Board"
-    description: "Vice President of REC"
+    description: "\"học, học nữa, học mãi\""
+
   - name: "Nguyễn Đỗ Nguyên"
     image: "https://placehold.co/400x500/151520/3DB8E8?text=N.N"
     role: "Vice President"
     department: "Executive Board"
     description: "Vice President of REC"
 
-
   - name: "Đinh Quốc Hùng"
     image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=Đ.H"
     role: "Secretary"
     department: "Executive Board"
-    description: "Test mô tả cho kí nè"
+    description: "Secretary of REC"
   - name: "Cao Tuệ Anh"
     image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=C.A"
     role: "Secretary"
     department: "Executive Board"
-    description: "Test mô tả cho kí nè"
+    description: "Secretary of REC"
 
 member:
 
