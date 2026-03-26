@@ -4,14 +4,17 @@ publications:
       - name: "Tran Quang Nhu"
         club_member: false
       - name: "Truong Tran Hai Ninh"
-        club_member: false
+        club_member: true
+        roles: ["2019 Member"]
       - name: "Huynh Nhat Nam"
-        club_member: false
+        club_member: true
+        roles: ["2019 Member"]
       - name: "Ho Dac Thao Van"
         roles: ["President 2024 & 2025"]
         club_member: true
       - name: "Huynh Thi Minh Nguyet"
-        club_member: false
+        club_member: true
+        roles: ["2021 Member"]
     year: 2025
     venue: "eBook Packages Intelligent Technologies and Robotics Intelligent Technologies and Robotics (R0) Springer Nature Proceedings excluding Computer Science"
     link: "https://doi.org/10.1007/978-3-031-50887-5_24"

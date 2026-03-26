@@ -1,6 +1,6 @@
 ---
 title: "Water Rocket Challenge"
-image: "activities/WaterRocket/banner.jpg"
+image: "activities/WaterRocket/VWRC_cover.png"
 date: 2023-04-15
 ---
 
