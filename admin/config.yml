@@ -16,8 +16,8 @@ collections:
     folder: "_activities"
     create: true
     slug: "{{slug}}"
-    media_folder: "../assets/images/activities/{{slug}}"
-    public_folder: "/assets/images/activities/{{slug}}"
+    media_folder: "/assets/images/activities"
+    public_folder: "/assets/images/activities"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", format: "yyyy-MM-dd", date_format: "yyyy-MM-dd", time_format: false }
@@ -29,8 +29,8 @@ collections:
     folder: "_workshops"
     create: true
     slug: "{{slug}}"
-    media_folder: "../assets/images/workshops/{{slug}}"
-    public_folder: "/assets/images/workshops/{{slug}}"
+    media_folder: "/assets/images/workshops"
+    public_folder: "/assets/images/workshops"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", format: "yyyy-MM-dd", date_format: "yyyy-MM-dd", time_format: false }
@@ -42,8 +42,8 @@ collections:
     folder: "_projects"
     create: true
     slug: "{{slug}}"
-    media_folder: "../assets/images/projects/{{slug}}"
-    public_folder: "/assets/images/projects/{{slug}}"
+    media_folder: "/assets/images/projects"
+    public_folder: "/assets/images/projects"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", format: "yyyy-MM-dd", date_format: "yyyy-MM-dd", time_format: false }
@@ -57,6 +57,8 @@ collections:
     folder: "_materials"
     create: true
     slug: "{{slug}}"
+    media_folder: "/assets/images/materials"
+    public_folder: "/assets/images/materials"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Course", name: "course", widget: "string" }
