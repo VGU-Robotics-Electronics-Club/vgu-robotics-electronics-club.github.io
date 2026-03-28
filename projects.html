@@ -20,7 +20,7 @@ permalink: /projects/
                 <div class="bg-surface border-tech p-6 rounded-md group h-full cursor-pointer hover:-translate-y-2 transition-transform duration-300">
                     {% if project.image %}
                     <div class="relative h-56 w-full mb-4 overflow-hidden rounded bg-dark flex items-center justify-center">
-                        <img src="{{ site.baseurl }}/assets/images/{{ project.image }}" alt="{{ project.title }}" class="max-h-full max-w-full object-cover img-hover-zoom" onerror="this.src='https://placehold.co/400x300/0D0D14/3DB8E8?text={{ project.title | url_encode }}'">
+                        <img src="{{ site.baseurl }}/assets/images/{{ project.image | split: 'assets/images/' | last }}" alt="{{ project.title }}" class="max-h-full max-w-full object-cover img-hover-zoom" onerror="this.src='https://placehold.co/400x300/0D0D14/3DB8E8?text={{ project.title | url_encode }}'">
                     </div>
                     {% endif %}
                     <h3 class="text-2xl font-bold font-tech text-white mb-2 group-hover:text-recBlue transition-colors uppercase">{{ project.title }}</h3>

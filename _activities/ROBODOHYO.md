@@ -1,6 +1,6 @@
 ---
 title: "ROBO DOHYO"
-image: "activities/ROBODOHYO/banner.jpg"
+image: "/assets/images/activities/ROBODOHYO/banner.jpg"
 date: 2022-04-15
 ---
 

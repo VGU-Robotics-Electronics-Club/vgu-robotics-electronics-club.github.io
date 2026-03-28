@@ -1,6 +1,6 @@
 ---
 title: "Different Aspects of Student Life in Germany"
-image: "workshops/RECxTalkshow/banner.jpg"
+image: "/assets/images/workshops/RECxTalkshow/banner.jpg"
 date: 2023-11-23
 ---
 

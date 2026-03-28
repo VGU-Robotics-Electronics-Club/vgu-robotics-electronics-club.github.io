@@ -1,6 +1,6 @@
 ---
 title: "The Solderwizard Workshop"
-image: "workshops/SOLDERWIZARD/banner.jpg"
+image: "/assets/images/workshops/SOLDERWIZARD/banner.jpg"
 date: 2025-11-06
 ---
 

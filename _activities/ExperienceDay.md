@@ -1,6 +1,6 @@
 ---
 title: "VGU Experience Day"
-image: "activities/ExperienceDay/2025.jpg"
+image: "/assets/images/activities/ExperienceDay/2025.jpg"
 date: 2025-03-28
 ---
 

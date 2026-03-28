@@ -1,6 +1,6 @@
 ---
 title: "5-DOF Robot Arm"
-image: "projects/5-DOFRobotArm/0.png"
+image: "/assets/images/projects/5-DOFRobotArm/0.png"
 members: ""
 description: "Smart home control system using ESP32 and IoT technology."
 date: 2025-09-10

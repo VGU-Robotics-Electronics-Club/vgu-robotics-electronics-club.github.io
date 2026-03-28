@@ -1,6 +1,6 @@
 ---
 title: "Digital Filter: Low-Pass Design & Implementation"
-image: "projects/DigitalFilter/0.png"
+image: "/assets/images/projects/DigitalFilter/0.png"
 members: "Tran Minh Tri, Nguyen Phuc Truong Hung, Nguyen Minh Huy, Huynh Phuoc Vinh, Tran Phuoc Nguyen Khoi"
 description: "Smart home control system using ESP32 and IoT technology."
 date: 2025-11-10

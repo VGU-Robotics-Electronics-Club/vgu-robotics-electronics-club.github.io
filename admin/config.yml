@@ -1,0 +1,66 @@
+backend:
+  name: git-gateway
+  branch: main
+local_backend: true
+publish_mode: editorial_workflow
+
+site_url: https://vgu-robotics-electronics-club.github.io
+display_url: https://vgu-robotics-electronics-club.github.io
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "activities"
+    label: "Activities"
+    folder: "_activities"
+    create: true
+    slug: "{{slug}}"
+    media_folder: "../assets/images/activities/{{slug}}"
+    public_folder: "/assets/images/activities/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "yyyy-MM-dd", date_format: "yyyy-MM-dd", time_format: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Content", name: "body", widget: "markdown" }
+
+  - name: "workshops"
+    label: "Workshops"
+    folder: "_workshops"
+    create: true
+    slug: "{{slug}}"
+    media_folder: "../assets/images/workshops/{{slug}}"
+    public_folder: "/assets/images/workshops/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "yyyy-MM-dd", date_format: "yyyy-MM-dd", time_format: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Content", name: "body", widget: "markdown" }
+
+  - name: "projects"
+    label: "Projects"
+    folder: "_projects"
+    create: true
+    slug: "{{slug}}"
+    media_folder: "../assets/images/projects/{{slug}}"
+    public_folder: "/assets/images/projects/{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "yyyy-MM-dd", date_format: "yyyy-MM-dd", time_format: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Members", name: "members", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Content", name: "body", widget: "markdown" }
+
+  - name: "materials"
+    label: "Materials"
+    folder: "_materials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Course", name: "course", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "yyyy-MM-dd", date_format: "yyyy-MM-dd", time_format: false }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publish", name: "publish", widget: "boolean", default: false }
+      - { label: "Content", name: "body", widget: "markdown" }

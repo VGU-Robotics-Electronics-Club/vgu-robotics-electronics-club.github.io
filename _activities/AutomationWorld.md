@@ -1,6 +1,6 @@
 ---
 title: "REC @ Automation World 2025"
-image: "activities/AutomationWorld/banner.png"
+image: "/assets/images/activities/AutomationWorld/banner.png"
 date: 2025-08-10
 ---
 

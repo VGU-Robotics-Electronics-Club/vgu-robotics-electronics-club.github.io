@@ -1,6 +1,6 @@
 ---
 title: "VGU SOCCERBOT CHAMPIONSHIP"
-image: "activities/SCB/banner.png"
+image: "/assets/images/activities/SCB/banner.png"
 date: 2026-03-01
 ---
 

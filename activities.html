@@ -37,7 +37,7 @@ permalink: /activities/
                 <div class="bg-surface border-tech p-6 rounded-md group h-full cursor-pointer hover:-translate-y-2 transition-transform duration-300">
                     {% if activity.image %}
                     <div class="relative h-64 w-full mb-6 overflow-hidden rounded clip-tech bg-dark flex items-center justify-center p-2">
-                        <img src="{{ site.baseurl }}/assets/images/{{ activity.image }}" alt="{{ activity.title }}" class="max-h-full max-w-full object-contain img-hover-zoom drop-shadow-[0_0_15px_rgba(61,184,232,0.3)]" onerror="this.src='https://placehold.co/400x400/0D0D14/3DB8E8?text={{ activity.title | url_encode }}'">
+                        <img src="{{ site.baseurl }}/assets/images/{{ activity.image | split: 'assets/images/' | last }}" alt="{{ activity.title }}" class="max-h-full max-w-full object-contain img-hover-zoom drop-shadow-[0_0_15px_rgba(61,184,232,0.3)]" onerror="this.src='https://placehold.co/400x400/0D0D14/3DB8E8?text={{ activity.title | url_encode }}'">
                     </div>
                     {% endif %}
                     <h3 class="text-2xl font-bold font-tech text-white mb-2 group-hover:text-recOrange transition-colors uppercase">{{ activity.title }}</h3>
@@ -70,7 +70,7 @@ permalink: /activities/
                 <div class="bg-surface border-tech p-6 rounded-md group h-full cursor-pointer hover:-translate-y-2 transition-transform duration-300">
                     {% if workshop.image %}
                     <div class="relative h-64 w-full mb-6 overflow-hidden rounded clip-tech bg-dark flex items-center justify-center p-2">
-                        <img src="{{ site.baseurl }}/assets/images/{{ workshop.image }}" alt="{{ workshop.title }}" class="max-h-full max-w-full object-contain img-hover-zoom drop-shadow-[0_0_15px_rgba(61,184,232,0.3)]" onerror="this.src='https://placehold.co/400x400/0D0D14/3DB8E8?text={{ workshop.title | url_encode }}'">
+                        <img src="{{ site.baseurl }}/assets/images/{{ workshop.image | split: 'assets/images/' | last }}" alt="{{ workshop.title }}" class="max-h-full max-w-full object-contain img-hover-zoom drop-shadow-[0_0_15px_rgba(61,184,232,0.3)]" onerror="this.src='https://placehold.co/400x400/0D0D14/3DB8E8?text={{ workshop.title | url_encode }}'">
                     </div>
                     {% endif %}
                     <h3 class="text-2xl font-bold font-tech text-white mb-2 group-hover:text-recOrange transition-colors uppercase">{{ workshop.title }}</h3>

@@ -1,6 +1,6 @@
 ---
 title: "Career Fair and Industry Exploration Day"
-image: "activities/CareerFair/banner.jpg"
+image: "/assets/images/activities/CareerFair/banner.jpg"
 date: 2025-04-15
 ---
 

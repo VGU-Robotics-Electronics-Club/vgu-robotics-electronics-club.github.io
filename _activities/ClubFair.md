@@ -1,6 +1,6 @@
 ---
 title: "VGU Club Fair"
-image: "activities/ClubFair/P1075583.jpg"
+image: "/assets/images/activities/ClubFair/P1075583.jpg"
 date: 2025-09-25
 ---
 

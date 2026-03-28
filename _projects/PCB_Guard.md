@@ -1,6 +1,6 @@
 ---
 title: "PCB-GUARD: A PROGRAM FOR PCB DESIGN WITH LAYOUT VALIDATOR"
-image: "projects/PCB_Guard/0.png"
+image: "/assets/images/projects/PCB_Guard/0.png"
 members: "Tran Phuoc Nguyen Khoi, Dang Chi Kien, Huynh Phuoc Vinh"
 description: "Smart home control system using ESP32 and IoT technology."
 date: 2025-12-10
@@ -17,3 +17,4 @@ In the Electrical and Computer Engineering (ECE) Program, students have a chance
 <a href="{{ site.baseurl }}/assets/images/projects/PCB_Guard/report.pdf" target="_blank" class="w-full justify-center bg-[#1877F2] text-white font-tech text-base px-4 py-3 rounded-sm clip-tech transition-all duration-300 font-bold tracking-wider hover:bg-blue-600 hover:-translate-y-1 flex items-center gap-2 glow-blue">
 Full Report PDF File
 </a>
+

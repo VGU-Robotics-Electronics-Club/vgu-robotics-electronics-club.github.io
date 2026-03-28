@@ -1,6 +1,6 @@
 ---
 title: "WEB SERCURITY 101"
-image: "workshops/WEBSERCURITY101_2024/banner.jpg"
+image: "/assets/images/workshops/WEBSERCURITY101_2024/banner.jpg"
 date: 2024-11-10
 ---
 
