@@ -1,16 +1,16 @@
 board:
   - name: Hồ Đắc Thảo Vân
     image: HoDacThaoVan.png
-    big_image: HoDacThaoVan_big.png
+    big_image: /assets/images/members/2025/2_hodacthaovan.jpg
     role: President
     department: Executive Board
-    description: Student at Vietnamese-German University| Electrical & Computer
-      Engineering Program.
+    description: Electrical & Computer Engineering Program(ECE) - Intake 2021
   - name: Huỳnh Phước Vinh
-    image: https://placehold.co/400x500/151520/3DB8E8?text=H.V
+    image: /assets/images/members/2025/1_vinh.jpg
     role: Vice President / Head of Technical
     department: Executive Board / Technical
-    description: Vice President of REC
+    description: Electrical & Computer Engineering Program(ECE) - Intake 2024
+    big_image: /assets/images/members/2025/2_vinh.jpg
   - name: Đỗ Lương Minh Hoàng
     image: DoLuongMinhHoang.jpg
     big_image: DoLuongMinhHoang_big.jpg
@@ -18,63 +18,66 @@ board:
     department: Executive Board
     description: '"học, học nữa, học mãi"'
   - name: Nguyễn Đỗ Nguyên
-    image: https://placehold.co/400x500/151520/3DB8E8?text=N.N
+    image: /assets/images/members/2025/1_-nguyên-đỗ.png
     role: Vice President
     department: Executive Board
-    description: Vice President of REC
+    description: Electrical & Computer Engineering Program (ECE) - Intake 2023
   - name: Đinh Quốc Hùng
-    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=Đ.H
+    image: /assets/images/members/2025/1_hùng.jpg
     role: Secretary
     department: Executive Board
-    description: Secretary of REC
+    description: Electrical & Computer Engineering Program(ECE) - Intake 2023
+    big_image: /assets/images/members/2025/2_hùng.jpg
   - name: Cao Tuệ Anh
-    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=C.A
+    image: /assets/images/members/2025/1_tuệ-anh.jpg
     role: Secretary
     department: Executive Board
-    description: Secretary of REC
+    description: " Computer Science Engineering Program (CSE) - Intake 2024"
+    big_image: /assets/images/members/2025/2_tuệ-anh.jpg
 member:
   - name: Nguyễn Trần Nam Phương
     image: https://placehold.co/300x300/0D0D14/3DB8E8?text=N.P
     role: Vice Head of Technical
     department: Technical
-    description: Vice Head of Technical
+    description: Mechanical Engineering Program (MEN) - Intake 2024
   - name: Phạm Đình Trung Hiếu
     image: /assets/images/members/2025/phamdinhtrunghieu.png
     role: Vice Head of Technical
     department: Technical
-    description: Vice Head of Technical
+    description: " Computer Science Engineering Program (CSE) - Intake 2024"
     big_image: /assets/images/members/2025/phamdinhtrunghieu_big.jpg
   - name: Lê Huỳnh Văn Hóa
     image: LeHuynhVanHoa.jpg
     big_image: LeHuynhVanHoa_big.jpg
     role: Head of Academic
     department: Academic
-    description: Head of Academic
+    description: " Computer Science Engineering Program (CSE) - Intake 2023"
   - name: Nguyễn Quốc An
-    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=N.A
+    image: /assets/images/members/2025/1_-an.jpg
     role: Vice Head of Academic
     department: Academic
-    description: Vice Head of Academic
+    description: Electrical & Computer Engineering Program(ECE)  - Intake 2023
   - name: Nguyễn Phúc Trường Hưng
-    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=H.H
+    image: /assets/images/members/2025/1_hưng.jpg
     role: Vice Head of Academic
     department: Academic
-    description: Vice Head of Academic
+    description: Electrical & Computer Engineering Program(ECE)  - Intake 2024
+    big_image: /assets/images/members/2025/2_hưng.jpg
   - name: Lê Hồ Thu Giang
     image: https://placehold.co/300x300/0D0D14/3DB8E8?text=L.G
     role: Head of Media
     department: Media
-    description: Head of Media
+    description: Finance and Accounting Program (BFA) - Intake 2024
   - name: Trương Nguyễn Nhã Hân
-    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=T.H
+    image: /assets/images/members/2025/1_hân.jpg
     role: Vice Head of Media
     department: Media
-    description: Vice Head of Media
+    description: Computer Science Engineering Program (CSE) - Intake 2023
   - name: Đặng Khoa Nguyên
-    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=Đ.K
+    image: /assets/images/members/2025/1_nguyên.jpg
     role: Vice Head of Media
     department: Media
-    description: Vice Head of Media
+    description: Electrical & Computer Engineering Program (ECE)  - Intake 2023
   - name: Nguyễn Đình Thái Tuệ
     image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NĐ
     role: Member
