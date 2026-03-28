@@ -9,6 +9,4 @@ Lmao Lmao Lmao
 Dưới đây là ảnh minh họa về lmao lmao
 
 ![](/assets/images/activities/clubfair-P1075583.jpg)
-
-
-
+Heheh
