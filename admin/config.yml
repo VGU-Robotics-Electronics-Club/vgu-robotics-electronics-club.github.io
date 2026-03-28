@@ -1,8 +1,10 @@
 backend:
   name: git-gateway
   branch: main
-local_backend: true
 publish_mode: editorial_workflow
+
+media_library:
+  max_file_size: 20485760
 
 site_url: https://vgu-robotics-electronics-club.github.io
 display_url: https://vgu-robotics-electronics-club.github.io
