@@ -1,529 +1,517 @@
 board:
-  - name: "Hồ Đắc Thảo Vân"
-    image: "HoDacThaoVan.png"
-    big_image: "HoDacThaoVan_big.png"
-    role: "President"
-    department: "Executive Board"
-    description: "Student at Vietnamese-German University| Electrical & Computer Engineering Program."
-
-  - name: "Huỳnh Phước Vinh"
-    image: "https://placehold.co/400x500/151520/3DB8E8?text=H.V"
-    role: "Vice President / Head of Technical"
-    department: "Executive Board / Technical"
-    description: "Vice President of REC"
-
-  - name: "Đỗ Lương Minh Hoàng"
-    image: "DoLuongMinhHoang.jpg"
-    big_image: "DoLuongMinhHoang_big.jpg"
-    role: "Vice President"
-    department: "Executive Board"
-    description: "\"học, học nữa, học mãi\""
-
-  - name: "Nguyễn Đỗ Nguyên"
-    image: "https://placehold.co/400x500/151520/3DB8E8?text=N.N"
-    role: "Vice President"
-    department: "Executive Board"
-    description: "Vice President of REC"
-
-  - name: "Đinh Quốc Hùng"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=Đ.H"
-    role: "Secretary"
-    department: "Executive Board"
-    description: "Secretary of REC"
-  - name: "Cao Tuệ Anh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=C.A"
-    role: "Secretary"
-    department: "Executive Board"
-    description: "Secretary of REC"
-
+  - name: Hồ Đắc Thảo Vân
+    image: HoDacThaoVan.png
+    big_image: HoDacThaoVan_big.png
+    role: President
+    department: Executive Board
+    description: Student at Vietnamese-German University| Electrical & Computer
+      Engineering Program.
+  - name: Huỳnh Phước Vinh
+    image: https://placehold.co/400x500/151520/3DB8E8?text=H.V
+    role: Vice President / Head of Technical
+    department: Executive Board / Technical
+    description: Vice President of REC
+  - name: Đỗ Lương Minh Hoàng
+    image: DoLuongMinhHoang.jpg
+    big_image: DoLuongMinhHoang_big.jpg
+    role: Vice President
+    department: Executive Board
+    description: '"học, học nữa, học mãi"'
+  - name: Nguyễn Đỗ Nguyên
+    image: https://placehold.co/400x500/151520/3DB8E8?text=N.N
+    role: Vice President
+    department: Executive Board
+    description: Vice President of REC
+  - name: Đinh Quốc Hùng
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=Đ.H
+    role: Secretary
+    department: Executive Board
+    description: Secretary of REC
+  - name: Cao Tuệ Anh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=C.A
+    role: Secretary
+    department: Executive Board
+    description: Secretary of REC
 member:
-
-  - name: "Nguyễn Trần Nam Phương"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=N.P"
-    role: "Vice Head of Technical"
-    department: "Technical"
-    description: "Vice Head of Technical"
-
-  - name: "Phạm Đình Trung Hiếu"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=P.H"
-    role: "Vice Head of Technical"
-    department: "Technical"
-    description: "Vice Head of Technical"
-
-  - name: "Lê Huỳnh Văn Hóa"
-    image: "LeHuynhVanHoa.jpg"
-    big_image: "LeHuynhVanHoa_big.jpg"
-    role: "Head of Academic"
-    department: "Academic"
-    description: "Head of Academic"
-
-  - name: "Nguyễn Quốc An"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=N.A"
-    role: "Vice Head of Academic"
-    department: "Academic"
-    description: "Vice Head of Academic"
-
-  - name: "Nguyễn Phúc Trường Hưng"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=H.H"
-    role: "Vice Head of Academic"
-    department: "Academic"
-    description: "Vice Head of Academic"
-
-  - name: "Lê Hồ Thu Giang"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=L.G"
-    role: "Head of Media"
-    department: "Media"
-    description: "Head of Media"
-
-  - name: "Trương Nguyễn Nhã Hân"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=T.H"
-    role: "Vice Head of Media"
-    department: "Media"
-    description: "Vice Head of Media"
-  - name: "Đặng Khoa Nguyên"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=Đ.K"
-    role: "Vice Head of Media"
-    department: "Media"
-    description: "Vice Head of Media"
-
-# Normal Members imported from CSV
-  - name: "Nguyễn Đình Thái Tuệ"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NĐ"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Đỗ Quang Minh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=ĐQ"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Đức Bình"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NĐ"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Đỗ Phương Anh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NĐ"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Xuân Quỳnh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NX"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Lương Nhật Minh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=LN"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Hoàng Nhật Tân"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NH"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Minh Huy"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NM"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Trần Phước Nguyên Khôi"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TP"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Ngọc Phúc Khang"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NN"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Đức Anh Minh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NĐ"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Nhật Quân"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NN"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Trần Ngọc Minh Khôi"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TN"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Thái Nguyên Linh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TN"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Đặng Hoàng Huy"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=ĐH"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Lê Trương Phú Khánh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=LT"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Đặng Chí Kiên"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=ĐC"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Trương Quốc Phong"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TQ"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Dương Huỳnh Anh Minh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=DH"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Bùi Nguyễn Hải Ninh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=BN"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Lê Minh Khang"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=LM"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Dương Phạm Ngọc Minh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=DP"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Văn Công"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NV"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Hà Hoàng Đức Anh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=HH"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Lê Minh Triết"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=LM"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Văn Quốc Khánh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NV"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Trương Công Bảo Tuệ"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TC"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Hoàng Bùi Quang Anh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=HB"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Trương Công Khanh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TC"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Vũ Anh Khoa"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=VA"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Cao Minh Trí"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=CM"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Phạm Nhật Anh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=PN"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Lê Nguyên Đạt"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=LN"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Phạm Minh Luân"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=PM"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Phạm Minh Khang"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=PM"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Huỳnh Anh Tuấn"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=HA"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Phan Minh Khôi"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=PM"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Lê Hương Vy"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=LH"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Lê Quốc Bảo"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NL"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Công Cao Sơn"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NC"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Đỗ Hải Phong"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=ĐH"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Hoài Ân"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NH"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Lâm Mạnh Tiến"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=LM"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Hữu Tùng Bách"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NH"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Hoàng Hải"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NH"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Văn Nguyễn Tuệ Đăng"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=VN"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Văn Đức"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NV"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Trần Vinh Quang"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TV"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Trung Kiên"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NT"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Trần Hữu Vũ Phương"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TH"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Lê Nguyễn Minh Sơn"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=LN"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Minh Khôi"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NM"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Lê Minh Duy"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NL"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Bùi Thiện Nghĩa"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=BT"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Lý Kiến Hưng"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=LK"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Quý Thiện"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NQ"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Đức Hiếu"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NĐ"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Lê Bá Minh Khoa"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=LB"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Cảnh Nhật Nguyên"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NC"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Phạm Công Khôi"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=PC"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Trần Trường Giang"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TT"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Ngọc Kiều Phong"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NN"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Bùi Minh Nhựt"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=BM"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Hữu Thức"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NH"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Trương Thiên Bảo"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TT"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Minh Ánh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NM"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Đào Quang Tùng"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=ĐQ"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Ngụy Gia Tuấn"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NG"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Trần Bá Tùng"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TB"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Phạm Lê Khôi"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=PL"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Hà Bảo Lâm"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=HB"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Vũ Tuấn Nam"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=VT"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Nguyễn Thị Hồng Yến"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NT"
-    role: "Member"
-    department: "Technical"
-    description: "Member of Technical Department."
-  - name: "Phạm Thị Xuân Thư"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=PT"
-    role: "Member"
-    department: "Academic"
-    description: "Member of Academic Department."
-  - name: "Lục Gia Nghi Anh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=LG"
-    role: "Member"
-    department: "Academic"
-    description: "Member of Academic Department."
-  - name: "Nguyễn Quang Nhật"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NQ"
-    role: "Member"
-    department: "Academic"
-    description: "Member of Academic Department."
-  - name: "Đặng Hoàng Huy"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=ĐH"
-    role: "Member"
-    department: "Academic"
-    description: "Member of Academic Department."
-  - name: "Nguyễn Hoàng Nhật Tân"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NH"
-    role: "Member"
-    department: "Academic"
-    description: "Member of Academic Department."
-  - name: "Nguyễn Hải Đăng"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NH"
-    role: "Member"
-    department: "Academic"
-    description: "Member of Academic Department."
-  - name: "Trần Minh Khôi"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TM"
-    role: "Member"
-    department: "Academic"
-    description: "Member of Academic Department."
-  - name: "Phạm Thị Phương Uyên"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=PT"
-    role: "Member"
-    department: "Academic"
-    description: "Member of Academic Department."
-  - name: "Nguyễn Dương Khánh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=ND"
-    role: "Member"
-    department: "Academic"
-    description: "Member of Academic Department."
-  - name: "Nguyễn Dương Tường Lâm"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=ND"
-    role: "Member"
-    department: "Media"
-    description: "Member of Media Department."
-  - name: "Hồ Hải Triều"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=HH"
-    role: "Member"
-    department: "Media"
-    description: "Member of Media Department."
-  - name: "Lê Hoàng Nguyên"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=LH"
-    role: "Member"
-    department: "Media"
-    description: "Member of Media Department."
-  - name: "Nguyễn Ngọc Thảo An"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=NN"
-    role: "Member"
-    department: "Media"
-    description: "Member of Media Department."
-  - name: "Trần Đức Minh"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=TĐ"
-    role: "Member"
-    department: "Media"
-    description: "Member of Media Department."
-  - name: "Âu Hồng Ân"
-    image: "https://placehold.co/300x300/0D0D14/3DB8E8?text=ÂH"
-    role: "Member"
-    department: "Media"
-    description: "Member of Media Department."
+  - name: Nguyễn Trần Nam Phương
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=N.P
+    role: Vice Head of Technical
+    department: Technical
+    description: Vice Head of Technical
+  - name: Phạm Đình Trung Hiếu
+    image: /assets/images/members/2025/phamdinhtrunghieu.png
+    role: Vice Head of Technical
+    department: Technical
+    description: Vice Head of Technical
+    big_image: /assets/images/members/2025/phamdinhtrunghieu_big.jpg
+  - name: Lê Huỳnh Văn Hóa
+    image: LeHuynhVanHoa.jpg
+    big_image: LeHuynhVanHoa_big.jpg
+    role: Head of Academic
+    department: Academic
+    description: Head of Academic
+  - name: Nguyễn Quốc An
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=N.A
+    role: Vice Head of Academic
+    department: Academic
+    description: Vice Head of Academic
+  - name: Nguyễn Phúc Trường Hưng
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=H.H
+    role: Vice Head of Academic
+    department: Academic
+    description: Vice Head of Academic
+  - name: Lê Hồ Thu Giang
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=L.G
+    role: Head of Media
+    department: Media
+    description: Head of Media
+  - name: Trương Nguyễn Nhã Hân
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=T.H
+    role: Vice Head of Media
+    department: Media
+    description: Vice Head of Media
+  - name: Đặng Khoa Nguyên
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=Đ.K
+    role: Vice Head of Media
+    department: Media
+    description: Vice Head of Media
+  - name: Nguyễn Đình Thái Tuệ
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NĐ
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Đỗ Quang Minh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=ĐQ
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Đức Bình
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NĐ
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Đỗ Phương Anh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NĐ
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Xuân Quỳnh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NX
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Lương Nhật Minh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=LN
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Hoàng Nhật Tân
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NH
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Minh Huy
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NM
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Trần Phước Nguyên Khôi
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TP
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Ngọc Phúc Khang
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NN
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Đức Anh Minh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NĐ
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Nhật Quân
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NN
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Trần Ngọc Minh Khôi
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TN
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Thái Nguyên Linh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TN
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Đặng Hoàng Huy
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=ĐH
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Lê Trương Phú Khánh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=LT
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Đặng Chí Kiên
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=ĐC
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Trương Quốc Phong
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TQ
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Dương Huỳnh Anh Minh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=DH
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Bùi Nguyễn Hải Ninh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=BN
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Lê Minh Khang
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=LM
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Dương Phạm Ngọc Minh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=DP
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Văn Công
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NV
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Hà Hoàng Đức Anh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=HH
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Lê Minh Triết
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=LM
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Văn Quốc Khánh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NV
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Trương Công Bảo Tuệ
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TC
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Hoàng Bùi Quang Anh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=HB
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Trương Công Khanh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TC
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Vũ Anh Khoa
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=VA
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Cao Minh Trí
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=CM
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Phạm Nhật Anh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=PN
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Lê Nguyên Đạt
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=LN
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Phạm Minh Luân
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=PM
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Phạm Minh Khang
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=PM
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Huỳnh Anh Tuấn
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=HA
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Phan Minh Khôi
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=PM
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Lê Hương Vy
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=LH
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Lê Quốc Bảo
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NL
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Công Cao Sơn
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NC
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Đỗ Hải Phong
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=ĐH
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Hoài Ân
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NH
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Lâm Mạnh Tiến
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=LM
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Hữu Tùng Bách
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NH
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Hoàng Hải
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NH
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Văn Nguyễn Tuệ Đăng
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=VN
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Văn Đức
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NV
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Trần Vinh Quang
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TV
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Trung Kiên
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NT
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Trần Hữu Vũ Phương
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TH
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Lê Nguyễn Minh Sơn
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=LN
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Minh Khôi
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NM
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Lê Minh Duy
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NL
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Bùi Thiện Nghĩa
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=BT
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Lý Kiến Hưng
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=LK
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Quý Thiện
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NQ
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Đức Hiếu
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NĐ
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Lê Bá Minh Khoa
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=LB
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Cảnh Nhật Nguyên
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NC
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Phạm Công Khôi
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=PC
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Trần Trường Giang
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TT
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Ngọc Kiều Phong
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NN
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Bùi Minh Nhựt
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=BM
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Hữu Thức
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NH
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Trương Thiên Bảo
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TT
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Minh Ánh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NM
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Đào Quang Tùng
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=ĐQ
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Ngụy Gia Tuấn
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NG
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Trần Bá Tùng
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TB
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Phạm Lê Khôi
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=PL
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Hà Bảo Lâm
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=HB
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Vũ Tuấn Nam
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=VT
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Nguyễn Thị Hồng Yến
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NT
+    role: Member
+    department: Technical
+    description: Member of Technical Department.
+  - name: Phạm Thị Xuân Thư
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=PT
+    role: Member
+    department: Academic
+    description: Member of Academic Department.
+  - name: Lục Gia Nghi Anh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=LG
+    role: Member
+    department: Academic
+    description: Member of Academic Department.
+  - name: Nguyễn Quang Nhật
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NQ
+    role: Member
+    department: Academic
+    description: Member of Academic Department.
+  - name: Đặng Hoàng Huy
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=ĐH
+    role: Member
+    department: Academic
+    description: Member of Academic Department.
+  - name: Nguyễn Hoàng Nhật Tân
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NH
+    role: Member
+    department: Academic
+    description: Member of Academic Department.
+  - name: Nguyễn Hải Đăng
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NH
+    role: Member
+    department: Academic
+    description: Member of Academic Department.
+  - name: Trần Minh Khôi
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TM
+    role: Member
+    department: Academic
+    description: Member of Academic Department.
+  - name: Phạm Thị Phương Uyên
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=PT
+    role: Member
+    department: Academic
+    description: Member of Academic Department.
+  - name: Nguyễn Dương Khánh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=ND
+    role: Member
+    department: Academic
+    description: Member of Academic Department.
+  - name: Nguyễn Dương Tường Lâm
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=ND
+    role: Member
+    department: Media
+    description: Member of Media Department.
+  - name: Hồ Hải Triều
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=HH
+    role: Member
+    department: Media
+    description: Member of Media Department.
+  - name: Lê Hoàng Nguyên
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=LH
+    role: Member
+    department: Media
+    description: Member of Media Department.
+  - name: Nguyễn Ngọc Thảo An
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NN
+    role: Member
+    department: Media
+    description: Member of Media Department.
+  - name: Trần Đức Minh
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=TĐ
+    role: Member
+    department: Media
+    description: Member of Media Department.
+  - name: Âu Hồng Ân
+    image: https://placehold.co/300x300/0D0D14/3DB8E8?text=ÂH
+    role: Member
+    department: Media
+    description: Member of Media Department.
