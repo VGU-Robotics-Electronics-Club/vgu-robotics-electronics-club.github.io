@@ -4,20 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <!-- Set theme early to avoid flash of opposite theme -->
     <script>/* inline: set data-theme before CSS loads to prevent FOUC */(function(){try{var t=localStorage.getItem('theme');if(!t){var p=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches;t=p?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){} })();</script>
-    <!-- Integrate Tailwind CSS for rapid styling -->
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <!-- Import Google Fonts: Rajdhani for headings (tech feel), Inter for content -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Integrate scripts and styles -->
     <script src="{{ site.baseurl }}/assets/js/tailwind.config.js"></script>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/components.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/utilities.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/theme.css">
-</head>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    </head>
 <body class="antialiased selection:bg-recOrange selection:text-white flex flex-col min-h-screen">
     <!-- Navbar -->
     <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-darker/90 backdrop-blur-md border-b border-gray-800">
