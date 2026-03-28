@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: main
 publish_mode: editorial_workflow
+local_backend: true
 
 media_library:
   max_file_size: 20485760
@@ -68,3 +69,110 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Publish", name: "publish", widget: "boolean", default: false }
       - { label: "Content", name: "body", widget: "markdown" }
+
+  - name: "data"
+    label: "Data"
+    editor:
+      preview: false
+    files:
+      - label: "Members 2024"
+        name: "members_2024"
+        file: "_data/2024_members.yml"
+        media_folder: "/assets/images/members/2024"
+        public_folder: "/assets/images/members/2024"
+        fields:
+          - label: "Board"
+            name: "board"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Large Image", name: "big_image", widget: "image", required: false }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Department", name: "department", widget: "string" }
+              - { label: "Description", name: "description", widget: "string", required: false }
+          - label: "Members"
+            name: "member"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Large Image", name: "big_image", widget: "image", required: false }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Department", name: "department", widget: "string" }
+              - { label: "Description", name: "description", widget: "string", required: false }
+
+      - label: "Members 2025"
+        name: "members_2025"
+        file: "_data/2025_members.yml"
+        media_folder: "/assets/images/members/2025"
+        public_folder: "/assets/images/members/2025"
+        fields:
+          - label: "Board"
+            name: "board"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Large Image", name: "big_image", widget: "image", required: false }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Department", name: "department", widget: "string" }
+              - { label: "Description", name: "description", widget: "string", required: false }
+          - label: "Members"
+            name: "member"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Large Image", name: "big_image", widget: "image", required: false }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Department", name: "department", widget: "string" }
+              - { label: "Description", name: "description", widget: "string", required: false }
+
+      - label: "Achievements"
+        name: "achievements"
+        file: "_data/achievements.yml"
+        fields:
+          - label: "Achievements"
+            name: "achievements"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Year", name: "year", widget: "number" }
+              - { label: "Category", name: "category", widget: "string" }
+              - label: "Members"
+                name: "members"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Club Member", name: "club_member", widget: "boolean", default: false }
+              - { label: "Team", name: "team", widget: "string", required: false }
+              - { label: "Link", name: "link", widget: "string", required: false }
+
+      - label: "Publications"
+        name: "publications"
+        file: "_data/publications.yml"
+        fields:
+          - label: "Publications"
+            name: "publications"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Authors"
+                name: "authors"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Club Member", name: "club_member", widget: "boolean", default: false }
+                  - label: "Roles"
+                    name: "roles"
+                    widget: "list"
+                    field: { label: "Role", name: "role", widget: "string" }
+              - { label: "Year", name: "year", widget: "number" }
+              - { label: "Venue", name: "venue", widget: "string", required: false }
+              - { label: "Link", name: "link", widget: "string", required: false }
+              - { label: "Abstract", name: "abstract", widget: "text", required: false }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }

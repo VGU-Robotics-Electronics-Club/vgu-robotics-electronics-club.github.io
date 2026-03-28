@@ -10,8 +10,9 @@ permalink: /achievements/
     <div class="w-24 h-1 bg-gradient-to-r from-recBlue to-recOrange mx-auto mt-4 mb-4"></div>
     <p class="text-gray-400 font-sans max-w-2xl mx-auto">Awards, recognitions, and milestones achieved by VGU Robotics &amp; Electronics Club members and teams.</p>
   </div>
-  {% if site.data.achievements and site.data.achievements.size > 0 %}
-    {% assign groups = site.data.achievements | group_by: 'year' | sort: 'name' | reverse %}
+  {% assign achievements = site.data.achievements.achievements %}
+  {% if achievements and achievements.size > 0 %}
+    {% assign groups = achievements | group_by: 'year' | sort: 'name' | reverse %}
 
     <div class="relative border-l-2 border-gray-800 md:ml-6 ml-3 pl-6 md:pl-10 space-y-12">
       {% for group in groups %}
