@@ -26,7 +26,7 @@ board:
     image: /assets/images/members/2025/1_hung.jpg
     role: Secretary
     department: Executive Board
-    description: Electrical & Computer Engineering Program(ECE) - Intake 2023
+    description: Electrical & Computer Engineering Program(ECE) - Intake 2024
     big_image: /assets/images/members/2025/2_hung.jpg
   - name: Cao Tuệ Anh
     image: /assets/images/members/2025/1_tue-anh.jpg
@@ -77,7 +77,7 @@ member:
     image: /assets/images/members/2025/1_nguyen.jpg
     role: Vice Head of Media
     department: Media
-    description: Electrical & Computer Engineering Program (ECE)  - Intake 2023
+    description: Electrical & Computer Engineering Program (ECE)  - Intake 2024
   - name: Nguyễn Đình Thái Tuệ
     image: https://placehold.co/300x300/0D0D14/3DB8E8?text=NĐ
     role: Member
