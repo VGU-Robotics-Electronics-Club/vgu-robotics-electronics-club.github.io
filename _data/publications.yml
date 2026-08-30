@@ -1,41 +1,266 @@
 publications:
-  - title: "Evaluation of 4G Wireless Mobile Network at the Vietnamese-German University"
+  - tags:
+      - Future-Frame Prediction
+      - Traffic Video Forecasting
+      - Training-Free Inference
+      - Geometry-Aware Refinement
+    title: "GeoRoute: Geometry-Aware Hybrid Inference for Traffic Future-Frame
+      Prediction"
     authors:
-      - name: "Tran Quang Nhu"
-        club_member: false
-      - name: "Truong Tran Hai Ninh"
-        club_member: true
-        roles: ["2019 Member"]
-      - name: "Huynh Nhat Nam"
-        club_member: true
-        roles: ["2019 Member"]
-      - name: "Ho Dac Thao Van"
-        roles: ["President 2024 & 2025"]
-        club_member: true
-      - name: "Huynh Thi Minh Nguyet"
-        club_member: true
-        roles: ["2021 Member"]
-    year: 2025
-    venue: "eBook Packages Intelligent Technologies and Robotics Intelligent Technologies and Robotics (R0) Springer Nature Proceedings excluding Computer Science"
-    link: "https://doi.org/10.1007/978-3-031-50887-5_24"
-    abstract: "Quality of service (QoS) measuring in mobile broadband networks has become a significant issue as a result of the rising awareness of QoS. This paper examines the quality of 4G Internet access at different locations inside Vietnamese-German University campus (VGU), in Vietnam, focusing on five key performance indicators (KPI) which are distinct by two mobile network operators (MNO) in Vietnam. To the best of our knowledge, there are many studies on evaluating quality of service (QoS) of mobile network signals, however, there is no extensive research on exploring 4G wireless mobile network at specific positions inside buildings. This paper provides radio frequency (RF) measurements and evaluation, with the experiments took place both indoors and outdoors and determines those operators performance based on stimulation results. Data was gathered from a walk test using QualiPoc installed in a smartphone and analyzed by a ROMES4 application. The study suggests that 4G signal quality is rather good but downloading speed is quite slow at ground level, and the higher building level the user goes, the worse the signal quality gets. Finally, the research group propose solution to enhance quality of the network quality inside VGU campus."
-    tags: ["Mobile Network Operator", "Walk Test", "4G LTE Network", "Key Performance indicators"]
-
-  - title: "A Real-time Vehicle Detection Pipeline with Data-centric Enhancements and Multi-stage DETR Distillation"
+      - club_member: true
+        name: Khang Minh Le
+        roles:
+          - Member of Tech. Dept. 2024
+          - Member of Tech. Dept. 2025
+      - club_member: true
+        name: " Hieu Dinh Trung Pham"
+        roles:
+          - Member of Tech. Dept. 2024
+          - Vice Head of Tech. Dept. 2025
+      - club_member: false
+        name: " Luu Thanh Danh"
+        roles:
+          - None
+      - club_member: false
+        name: " Nam-Tien Le"
+        roles:
+          - None
+      - club_member: false
+        name: " Hieu Anh Ngo"
+        roles:
+          - None
+      - club_member: true
+        name: " Phuong Huu Vu Tran"
+        roles:
+          - Member of Tech. Dept. 2025
+      - club_member: true
+        name: Son Nguyen Minh Le
+        roles:
+          - Member of Tech. Dept. 2025
+      - club_member: false
+        name: Nguyen Trong Nghia
+        roles:
+          - None
+      - club_member: false
+        name: Tu Tran Thi Cam
+        roles:
+          - None
+      - club_member: true
+        name: Huy Minh Nhat Nguyen
+        roles:
+          - Member of Tech. Dept. 2023
+          - Member of Tech. Dept. 2024
+      - club_member: false
+        name: Cuong Tuan Nguyen
+        roles:
+          - None
+    year: "2026"
+    venue: 10th AI City Challenge - European Conference on Computer Vision 2026
+      Workshop
+    link: https://doi.org/10.48550/arXiv.2608.09493
+    abstract: >
+      Long-horizon future-frame prediction is important for autonomous driving,
+      traffic surveillance, and intelligent transportation systems, yet remains
+      challenging due to temporal ghosting, geometry drift, and inconsistent
+      object motion. Recent latent video diffusion models have achieved
+      impressive visual quality, but directly applying them to structured
+      traffic scenes often leads to unstable geometry and degraded temporal
+      coherence over extended horizons. We present a training-free inference
+      framework that stabilizes reliable static structure in pretrained video
+      predictions through multi-frame temporal context and view-conditioned
+      routing. For front-camera videos, our method refines generated futures
+      with a multi-frame depth-layered renderer that projects static geometry
+      from observed history frames while preserving dynamic regions from the
+      generative base model. For heterogeneous traffic views, a frozen
+      vision-language model infers a coarse camera group from the observed clip
+      and selects a specialized motion-based predictor. The framework requires
+      neither retraining nor fine-tuning of the underlying video model and can
+      be applied directly to pretrained generators. We validate the proposed
+      framework on the AI City Challenge Track 5 benchmark, where our final
+      system achieves competitive performance among the top-ranked teams. These
+      results demonstrate that geometry-aware inference-time refinement and
+      view-conditioned hybrid inference can improve static-geometry stability
+      and low-level structural fidelity without changing the original model
+      architecture.
+  - tags:
+      - VLM
+      - Sim2Real
+      - Text-Based Person Anomaly Search
+      - Fine-Grained Image-Text Matching
+    title: "FaLCon: Facet-Anchored Retrieval with Late Consensus for Sim2Real
+      Text-Based Person Anomaly Search"
     authors:
-      - name: "Huy Minh Nhat Nguyen"
+      - club_member: true
+        name: Hieu Dinh Trung Pham
+        roles:
+          - Member of Tech. Dept. 2024
+          - Member of Tech. Dept. 2025
+      - club_member: true
+        name: Phuong Huu Vu Tran
+        roles:
+          - Member of Tech. Dept. 2025
+      - club_member: false
+        name: " Thuan Duc Mai"
+        roles:
+          - None
+      - club_member: true
+        name: Son Nguyen Minh Le
+        roles:
+          - Member of Tech. Dept. 2025
+      - club_member: true
+        name: " Khang Le Minh"
+        roles:
+          - Member of Tech. Dept. 2024
+          - Member of Tech. Dept. 2025
+      - club_member: false
+        name: Hoang Vo
+        roles:
+          - None
+      - club_member: false
+        name: " Minh-Chi Phung"
+        roles:
+          - None
+      - club_member: true
+        name: Huy Minh Nhat Nguyen
+        roles:
+          - Member of Tech. Dept. 2023
+          - Member of Tech. Dept. 2024
+      - club_member: false
+        name: Cuong Tuan Nguyen
+        roles:
+          - None
+    year: "2026"
+    venue: 10th AI City Challenge - European Conference on Computer Vision 2026
+      Workshop
+    link: https://doi.org/10.48550/arXiv.2608.09474
+    abstract: >
+      Text-based person anomaly search requires retrieving real-world pedestrian
+      images from detailed natural-language descriptions using models trained
+      primarily on synthetic data. This Sim2Real setting is particularly
+      challenging because visually similar candidates may differ only in subtle
+      actions, object interactions, or appearance attributes, while applying
+      multimodal large language models to the entire gallery is computationally
+      expensive. We propose an anchor-constrained coarse-to-fine retrieval
+      framework that combines global semantic matching with fine-grained
+      verification. First, each query is represented by its original caption, a
+      structured concatenation, and several semantic facets. Heterogeneous
+      vision-language retrievers are then integrated through robust per-query
+      score calibration and soft claim-aware fusion. Full and concatenated
+      captions serve as anchors to preserve candidate recall, whereas
+      appearance, action, and object facets provide bounded corrective evidence.
+      The resulting candidate pool is further refined by a discriminative Qwen3
+      reranker and two complementary semantic verification modules based on
+      anomaly-aware cloze completion and multi-agent evidence reasoning.
+      Finally, an uncertainty-gated consensus module adaptively reweights the
+      three experts on ambiguous queries. Experiments on the PAB benchmark show
+      that the proposed soft claim-aware retrieval achieves 86.44% mAP@10,
+      substantially outperforming individual retrieval backbones. The complete
+      framework further improves performance to 95.41% mAP@10, 94.44% R@1, and
+      99.09% R@5. These results demonstrate that preserving strong global
+      retrieval while restricting expensive semantic reasoning to a small
+      candidate pool is effective for fine-grained Sim2Real person anomaly
+      search. Our code will be available on Github.
+  - title: A Real-time Vehicle Detection Pipeline with Data-centric Enhancements and
+      Multi-stage DETR Distillation
+    authors:
+      - name: Huy Minh Nhat Nguyen
         club_member: true
-        roles: ["Vice Head of Tech. Dept. 2024", "Member of Tech. Dept. 2025"]
-      - name: "Hieu Dinh Trung Pham"
+        roles:
+          - Vice Head of Tech. Dept. 2024
+          - Member of Tech. Dept. 2025
+      - name: Hieu Dinh Trung Pham
         club_member: true
-        roles: ["Member of Tech. Dept. 2024", "Vice Head of Tech. Dept. 2024"]
-      - name: "Khang Minh Le"
+        roles:
+          - Member of Tech. Dept. 2024
+          - Vice Head of Tech. Dept. 2025
+      - name: Khang Minh Le
         club_member: true
-        roles: ["Member of Tech. Dept. 2024 & 2025"]
-      - name: "Cuong Tuan Nguyen"
+        roles:
+          - Member of Tech. Dept. 2024 & 2025
+      - name: Cuong Tuan Nguyen
         club_member: false
+        roles:
+          - ""
     year: 2025
-    venue: "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops, 2025, pp. 5441-5448"
-    link: "https://doi.org/10.1109/ICCVW69036.2025.00569"
-    abstract: "Real-time vehicle detection often requires trading off accuracy for speed. To validate a solution that excels on both fronts, we adopt fisheye imagery, a domain where extreme radial distortion and scale variation defeat standard detectors, as a rigorous testbed. Our pipeline comprises three key stages: (1) Multi-stage DETR Distillation, a four-phase knowledge transfer leveraging KD-DETR's fixed distillation queries with separate head- and feature-level stages to avoid gradient conflicts and ensure progressive learning; (2) Data-centric Enhancements, creating a diverse training pool via Co-DETR pseudo-labeling, CycleGAN-Turbo day-to-night style transfer, and object-level flash/blur augmentations; and (3) Adaptive Sample Mining, which dynamically upsamples complex examples to sharpen the model's focus. When paired with D-FINE-M, our method achieves an F1 score of 0.6318 at 145 FPS on the AI City Challenge 2024 Track 4 test set, and with D-FINE-N, it reaches 781 FPS with an F1-score of 0.5597, all measured on an RTX 4090. Evaluated on the challenging FishEye8K benchmark of the 9th AI City Challenge, our approach delivers strong accuracy while maintaining real-time FPS. By ignoring fisheye distortions and treating them as a domain-agnostic stress test, we demonstrate that this data-centric, multi-stage distillation framework generalizes seamlessly to standard vehicle and broader object detection tasks, offering a unified solution for high-precision, real-time vision. Our implemented code: https://github.com/NhatHuy1812/VGU_VLinsight_AICITY2025_Track4"
-    tags: ["AI", "Real-time Object Detection", "Distillation", "Research"]
+    venue: Proceedings of the IEEE/CVF International Conference on Computer Vision
+      (ICCV) Workshops, 2025, pp. 5441-5448
+    link: https://doi.org/10.1109/ICCVW69036.2025.00569
+    abstract: "Real-time vehicle detection often requires trading off accuracy for
+      speed. To validate a solution that excels on both fronts, we adopt fisheye
+      imagery, a domain where extreme radial distortion and scale variation
+      defeat standard detectors, as a rigorous testbed. Our pipeline comprises
+      three key stages: (1) Multi-stage DETR Distillation, a four-phase
+      knowledge transfer leveraging KD-DETR's fixed distillation queries with
+      separate head- and feature-level stages to avoid gradient conflicts and
+      ensure progressive learning; (2) Data-centric Enhancements, creating a
+      diverse training pool via Co-DETR pseudo-labeling, CycleGAN-Turbo
+      day-to-night style transfer, and object-level flash/blur augmentations;
+      and (3) Adaptive Sample Mining, which dynamically upsamples complex
+      examples to sharpen the model's focus. When paired with D-FINE-M, our
+      method achieves an F1 score of 0.6318 at 145 FPS on the AI City Challenge
+      2024 Track 4 test set, and with D-FINE-N, it reaches 781 FPS with an
+      F1-score of 0.5597, all measured on an RTX 4090. Evaluated on the
+      challenging FishEye8K benchmark of the 9th AI City Challenge, our approach
+      delivers strong accuracy while maintaining real-time FPS. By ignoring
+      fisheye distortions and treating them as a domain-agnostic stress test, we
+      demonstrate that this data-centric, multi-stage distillation framework
+      generalizes seamlessly to standard vehicle and broader object detection
+      tasks, offering a unified solution for high-precision, real-time vision.
+      Our implemented code:
+      https://github.com/NhatHuy1812/VGU_VLinsight_AICITY2025_Track4"
+    tags:
+      - AI
+      - Real-time Object Detection
+      - Distillation
+      - Research
+  - title: Evaluation of 4G Wireless Mobile Network at the Vietnamese-German
+      University
+    authors:
+      - name: Tran Quang Nhu
+        club_member: false
+        roles:
+          - ""
+      - name: Truong Tran Hai Ninh
+        club_member: true
+        roles:
+          - 2019 Member
+      - name: Huynh Nhat Nam
+        club_member: true
+        roles:
+          - 2019 Member
+      - name: Ho Dac Thao Van
+        roles:
+          - President 2024 & 2025
+        club_member: true
+      - name: Huynh Thi Minh Nguyet
+        club_member: true
+        roles:
+          - 2021 Member
+    year: 2025
+    venue: eBook Packages Intelligent Technologies and Robotics Intelligent
+      Technologies and Robotics (R0) Springer Nature Proceedings excluding
+      Computer Science
+    link: https://doi.org/10.1007/978-3-031-50887-5_24
+    abstract: Quality of service (QoS) measuring in mobile broadband networks has
+      become a significant issue as a result of the rising awareness of QoS.
+      This paper examines the quality of 4G Internet access at different
+      locations inside Vietnamese-German University campus (VGU), in Vietnam,
+      focusing on five key performance indicators (KPI) which are distinct by
+      two mobile network operators (MNO) in Vietnam. To the best of our
+      knowledge, there are many studies on evaluating quality of service (QoS)
+      of mobile network signals, however, there is no extensive research on
+      exploring 4G wireless mobile network at specific positions inside
+      buildings. This paper provides radio frequency (RF) measurements and
+      evaluation, with the experiments took place both indoors and outdoors and
+      determines those operators performance based on stimulation results. Data
+      was gathered from a walk test using QualiPoc installed in a smartphone and
+      analyzed by a ROMES4 application. The study suggests that 4G signal
+      quality is rather good but downloading speed is quite slow at ground
+      level, and the higher building level the user goes, the worse the signal
+      quality gets. Finally, the research group propose solution to enhance
+      quality of the network quality inside VGU campus.
+    tags:
+      - Mobile Network Operator
+      - Walk Test
+      - 4G LTE Network
+      - Key Performance indicators
