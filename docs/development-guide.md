@@ -57,6 +57,7 @@ The site uses YAML data files for content that is more structured than a normal 
 
 - `_data/2024_members.yml`
 - `_data/2025_members.yml`
+- `_data/2026_members.yml`
 - `_data/achievements.yml`
 - `_data/publications.yml`
 

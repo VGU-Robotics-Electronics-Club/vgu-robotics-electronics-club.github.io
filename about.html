@@ -59,7 +59,7 @@ permalink: /about/
                 {% assign dColor = "text-gray-300" %}
                 {% assign dBorder = "hover:border-gray-500 hover:shadow-[0_0_20px_rgba(107,114,128,0.15)]" %}
                 
-                {% if role_downcase contains "president"%}
+                {% if role_downcase == "president" %}
                     {% assign dColor = "text-recOrange" %}
                     {% assign dBorder = "hover:border-recOrange hover:shadow-[0_0_20px_rgba(240,90,53,0.15)]" %}
                 {% elsif role_downcase contains "vice president" %}
@@ -83,7 +83,7 @@ permalink: /about/
                 {% assign big_img_src = img_src %}
                 {% if big_img and big_img != "" %}{% if big_img contains "http" or big_img contains "/" %}{% assign big_img_src = big_img %}{% else %}{% assign big_img_src = "/assets/images/members/" | append: yr | append: "/" | append: big_img %}{% endif %}{% endif %}
                 
-                <div class="leadership-card w-[calc(33.333%-1rem)] sm:w-[calc(25%-1rem)] md:w-[calc(20%-1.25rem)] lg:w-[calc(16.666%-1.25rem)] bg-surface/80 border border-gray-800 rounded-lg overflow-hidden cursor-pointer {{ dBorder }} transition-all duration-300 group"
+                <div class="leadership-card w-full max-w-[320px] sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-1rem)] bg-surface/80 border border-gray-800 rounded-lg overflow-hidden cursor-pointer {{ dBorder }} transition-all duration-300 group"
                      onclick="showOrgDetails(this, '{{ yr }}')"
                      data-name="{{ b.name }}" data-role="{{ b.role }}" data-dept="{{ b.department | default: 'Board' }}" data-img="{{ img_src | relative_url }}" data-big-img="{{ big_img_src | relative_url }}" data-color="{{ dColor }}" data-bio="{{ b.description | default: 'Club member' | escape }}">
                     <div class="aspect-[3/4] overflow-hidden relative bg-darker flex items-center justify-center bg-gradient-to-br from-surface to-dark">
@@ -127,7 +127,7 @@ permalink: /about/
         </div>
 
         <!-- LEVEL 3: DEPARTMENT MEMBERS -->
-        {% assign deptNames = "Technical,Academic,Media,Logistics" | split: "," %}
+        {% assign deptNames = "Technical,Academic,Media,Data Management,Logistics" | split: "," %}
         
         <div class="space-y-10 mt-12">
         {% for dName in deptNames %}
@@ -165,6 +165,12 @@ permalink: /about/
                     {% assign textLeadershipClass = "text-purple-400" %}
                     {% assign hoverBorderClass = "hover:border-purple-400" %}
                     {% assign dataColor = "text-purple-400" %}
+                {% elsif current_dept contains "data management" %}
+                    {% assign bgLineClass = "bg-recBlue" %}
+                    {% assign bgDotClass = "bg-recBlue shadow-[0_0_10px_#3db8e8]" %}
+                    {% assign textLeadershipClass = "text-recBlue" %}
+                    {% assign hoverBorderClass = "hover:border-recBlue" %}
+                    {% assign dataColor = "text-recBlue" %}
                 {% endif %}
 
                 <div class="bg-surface/20 border border-gray-800/60 rounded-xl p-5 md:p-6 relative overflow-hidden grid grid-cols-1">
@@ -173,9 +179,22 @@ permalink: /about/
                         <span class="w-2.5 h-2.5 rounded-sm {{ bgDotClass }}"></span> {{ dName }} {% if dName != "Secretary" %}Department{% endif %}
                     </h3>
                     
+                    {% assign has_non_leadership_members = false %}
+                    {% for m in members.member %}
+                        {% assign m_dept = m.department | downcase %}
+                        {% assign m_role_down = m.role | default: "" | downcase %}
+                        {% assign is_head = false %}
+                        {% if m_role_down contains "head" %}
+                            {% assign is_head = true %}
+                        {% endif %}
+                        {% if m_dept contains current_dept and is_head == false %}
+                            {% assign has_non_leadership_members = true %}
+                        {% endif %}
+                    {% endfor %}
+
                     <div class="flex flex-col lg:flex-row gap-8 w-full">
                         <!-- Leadership -->
-                        <div class="w-full lg:w-5/12">
+                        <div class="w-full {% if has_non_leadership_members %}lg:w-5/12{% endif %}">
                             <div class="mb-4 border-b border-gray-800 pb-2 flex justify-between items-end">
                                 <span class="text-xs font-tech font-bold {{ textLeadershipClass }} uppercase tracking-widest">Leadership</span>
                             </div>
@@ -211,6 +230,7 @@ permalink: /about/
                             </div>
                         </div>
 
+                        {% if has_non_leadership_members %}
                         <!-- Members -->
                         <div class="w-full lg:w-7/12">
                             <div class="mb-4 border-b border-gray-800 pb-2 flex justify-between items-end">
@@ -245,6 +265,7 @@ permalink: /about/
                                 </div>
                             </div>
                         </div>
+                        {% endif %}
                     </div>
                 </div>
             {% endif %}

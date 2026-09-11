@@ -90,6 +90,7 @@ Use the CMS `Data` section for structured records when possible. The editable fi
 
 - `_data/2024_members.yml`
 - `_data/2025_members.yml`
+- `_data/2026_members.yml`
 - `_data/achievements.yml`
 - `_data/publications.yml`
 

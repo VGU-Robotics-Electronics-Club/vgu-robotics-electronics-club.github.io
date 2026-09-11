@@ -1,0 +1,36 @@
+board:
+  - name: Huỳnh Phước Vinh
+    role: President
+    department: Executive Board
+    description: President of REC, term 2026.
+    image: assets/images/members/2026/Vinh.jpg
+  - name: Lê Hồ Thu Giang
+    role: Vice President
+    department: Executive Board
+    description: Vice President of REC, term 2026.
+    image: /assets/images/members/2026/LEHOTHUGIANG.jpg
+  - name: Phạm Đình Trung Hiếu
+    role: Vice President
+    department: Executive Board
+    description: Vice President of REC, term 2026.
+    image: /assets/images/members/2026/Hieu.JPG
+
+member:
+  - name: Nguyễn Dương Khánh
+    role: Head of Data Management
+    department: Data Management
+    description: Head of the Data Management Department, term 2026.
+    image: /assets/images/members/2026/Khanh.jpg
+
+  - name: Vũ Anh Khoa
+    role: Head of Data Management
+    department: Data Management
+    description: Head of the Data Management Department, term 2026.
+    image: /assets/images/members/2026/Khoa.jpg
+
+  - name: Âu Hồng Ân
+    role: Head of Media
+    department: Media
+    description: Head of the Media Department, term 2026.
+    image: /assets/images/members/2026/An.jpg
+
