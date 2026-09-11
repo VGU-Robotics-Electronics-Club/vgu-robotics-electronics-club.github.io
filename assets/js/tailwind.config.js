@@ -9,8 +9,8 @@ tailwind.config = {
                 surface: '#151520'
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                tech: ['Rajdhani', 'sans-serif'],
+                sans: ['Be Vietnam Pro', 'sans-serif'],
+                tech: ['Be Vietnam Pro', 'sans-serif'],
             }
         }
     }

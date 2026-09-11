@@ -21,7 +21,7 @@
 
 /* Member Card Typography */
 .member-name {
-    font-family: "Rajdhani", system-ui, sans-serif;
+    font-family: "Be Vietnam Pro", system-ui, sans-serif;
     font-weight: 700;
     color: #ffffff;
     font-size: 1.125rem; /* text-lg */
@@ -30,7 +30,7 @@
 }
 
 .member-name-sm {
-    font-family: "Rajdhani", system-ui, sans-serif;
+    font-family: "Be Vietnam Pro", system-ui, sans-serif;
     font-weight: 700;
     color: #ffffff;
     font-size: 1rem; /* text-base */
@@ -38,14 +38,14 @@
 }
 
 .member-role {
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: "Be Vietnam Pro", system-ui, sans-serif;
     color: #9ca3af; /* text-gray-400 */
     font-size: 0.75rem; /* text-xs */
     line-height: 1rem;
 }
 
 .member-role-dark {
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: "Be Vietnam Pro", system-ui, sans-serif;
     color: #6b7280; /* text-gray-500 */
     font-size: 0.75rem; /* text-xs */
     line-height: 1rem;
@@ -53,7 +53,7 @@
 
 
 .member-name-xl {
-    font-family: "Rajdhani", system-ui, sans-serif;
+    font-family: "Be Vietnam Pro", system-ui, sans-serif;
     font-weight: 700;
     color: #ffffff;
     font-size: 1.25rem; /* text-xl */
@@ -61,7 +61,7 @@
     margin-bottom: 0.25rem; /* mb-1 */
 }
 .member-name-2xl {
-    font-family: "Rajdhani", system-ui, sans-serif;
+    font-family: "Be Vietnam Pro", system-ui, sans-serif;
     font-weight: 700;
     color: #ffffff;
     font-size: 1.5rem; /* text-2xl */
@@ -69,7 +69,7 @@
     margin-bottom: 0.25rem; /* mb-1 */
 }
 .dept-title {
-    font-family: "Rajdhani", system-ui, sans-serif;
+    font-family: "Be Vietnam Pro", system-ui, sans-serif;
     font-weight: 700;
     color: #ffffff;
     font-size: 1.5rem; /* text-2xl */
